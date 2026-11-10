@@ -1,1 +1,281 @@
-[]
+[
+  {
+    "id": "98e52f45002b809c0a1976af",
+    "fingerprint": "7658906d05fa4df7fdf70bf3",
+    "title": "성남금토 스마트도시 정보통신공사-금속기둥",
+    "service": "나라장터",
+    "category": "사전규격 · 물품",
+    "stage": "사전규격",
+    "base_stage": "사전규격",
+    "date": "2026-11-06 17:20:42",
+    "agency": "조달청 서울지방조달청",
+    "notice_id": "R26BD00296424",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "272412380",
+        "field": "asignBdgtAmt"
+      }
+    ],
+    "amount": "배정예산 272412380",
+    "url": "https://www.g2b.go.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "기반시설"
+    ],
+    "references": {
+      "bfSpecRgstNo": "R26BD00296424",
+      "refNo": "경기남부단지사업2팀-3540"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "first_seen": "2026-11-10T13:30:31+09:00",
+    "observed_at": "2026-11-10T13:30:31+09:00",
+    "event_id": "652f0cb55dab5c1b4fac5b59",
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "98e52f45002b809c0a1976af",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/"
+      }
+    ]
+  },
+  {
+    "id": "0fba90aa39b6833caf6bc41c",
+    "fingerprint": "fe56ad8b2b5d611c8743df73",
+    "title": "성남금토2 공공주택지구 지형측량(무인비행장치)용역",
+    "service": "LH 전자조달",
+    "category": "입찰공고",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "2026/11/18 11:00",
+    "agency": "한국토지주택공사",
+    "notice_id": "2603962",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "43208000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "43208000",
+        "field": "designPrc"
+      }
+    ],
+    "amount": "기초금액 43208000 / 설계금액 43208000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "금토2"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "first_seen": "2026-11-10T13:30:31+09:00",
+    "observed_at": "2026-11-10T13:30:31+09:00",
+    "event_id": "76b7ff3f689b6884359d4ee6",
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "0fba90aa39b6833caf6bc41c",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "adf52f68889532d128b8f1c3",
+    "fingerprint": "7969f475dbcdd8a317df0956",
+    "title": "성남금토 A-4BL 아파트 전기공사 2공구-디젤발전기",
+    "service": "LH 전자조달",
+    "category": "계약",
+    "stage": "계약",
+    "base_stage": "계약",
+    "date": "20261105",
+    "agency": "경기남부 사업관리처 조달계약팀",
+    "notice_id": "2603450",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "계약금액",
+        "value": "403922000",
+        "field": "ctrctAmt"
+      }
+    ],
+    "amount": "계약금액 403922000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL",
+      "기반시설"
+    ],
+    "references": {},
+    "vendor": "유신에이치알 주식회사",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "first_seen": "2026-11-10T13:30:31+09:00",
+    "observed_at": "2026-11-10T13:30:31+09:00",
+    "event_id": "3c83519a6d848d28de846f19",
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "adf52f68889532d128b8f1c3",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "0bf88b66d648ee36af2fae16",
+    "fingerprint": "895d88215f7e03a546019a4c",
+    "title": "성남금토A2BL(국민·영구임대) 위탁관리용역(신규입주)",
+    "service": "LH 전자조달",
+    "category": "발주계획",
+    "stage": "발주계획",
+    "base_stage": "발주계획",
+    "date": "20261030",
+    "agency": "경기남부지역본부",
+    "notice_id": "",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "설계금액",
+        "value": "19734444",
+        "field": "odrplanDesignAmt"
+      },
+      {
+        "label": "지급자재금액",
+        "value": "0",
+        "field": "odrplanPayrrsAmt"
+      },
+      {
+        "label": "합계금액",
+        "value": "19734444",
+        "field": "cstrtnSumAmt"
+      }
+    ],
+    "amount": "설계금액 19734444 / 지급자재금액 0 / 합계금액 19734444",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "first_seen": "2026-11-10T13:30:31+09:00",
+    "observed_at": "2026-11-10T13:30:31+09:00",
+    "event_id": "643e4f083f6bc8706c12ac1c",
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "0bf88b66d648ee36af2fae16",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "7b55c6ba68d3c67266612596",
+    "fingerprint": "e904cfa90e15d483883ba097",
+    "title": "성남금토2 공공주택지구 조사설계용역",
+    "service": "LH 전자조달",
+    "category": "발주계획",
+    "stage": "발주계획",
+    "base_stage": "발주계획",
+    "date": "20261028",
+    "agency": "공공택지사업처",
+    "notice_id": "",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "설계금액",
+        "value": "7408830000",
+        "field": "odrplanDesignAmt"
+      },
+      {
+        "label": "지급자재금액",
+        "value": "0",
+        "field": "odrplanPayrrsAmt"
+      },
+      {
+        "label": "합계금액",
+        "value": "7408830000",
+        "field": "cstrtnSumAmt"
+      }
+    ],
+    "amount": "설계금액 7408830000 / 지급자재금액 0 / 합계금액 7408830000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "금토2"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "first_seen": "2026-11-10T13:30:31+09:00",
+    "observed_at": "2026-11-10T13:30:31+09:00",
+    "event_id": "12050f70806a62c205b1988d",
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "7b55c6ba68d3c67266612596",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "a15b63b8a51dd2e39c4b79b0",
+    "fingerprint": "cc417a204cba14f2112fdb38",
+    "title": "(재공고)성남금토 A-4BL 2공구(토목)-혼합골재",
+    "service": "LH 전자조달",
+    "category": "발주계획",
+    "stage": "발주계획",
+    "base_stage": "발주계획",
+    "date": "20261022",
+    "agency": "경기남부지역본부",
+    "notice_id": "",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "설계금액",
+        "value": "104500000",
+        "field": "odrplanDesignAmt"
+      },
+      {
+        "label": "지급자재금액",
+        "value": "0",
+        "field": "odrplanPayrrsAmt"
+      },
+      {
+        "label": "합계금액",
+        "value": "0",
+        "field": "cstrtnSumAmt"
+      }
+    ],
+    "amount": "설계금액 104500000 / 지급자재금액 0 / 합계금액 0",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "first_seen": "2026-11-10T13:30:31+09:00",
+    "observed_at": "2026-11-10T13:30:31+09:00",
+    "event_id": "d9cc208d34c227d6ea7b08c7",
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "a15b63b8a51dd2e39c4b79b0",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  }
+]

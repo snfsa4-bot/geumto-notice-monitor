@@ -1,1 +1,238 @@
-[]
+[
+  {
+    "date": "2026-11-10",
+    "checked_at": "2026-11-10T13:30:31+09:00",
+    "lookback_days": 7,
+    "statuses": [
+      {
+        "dataset": "15129394",
+        "service": "나라장터",
+        "category": "입찰공고 · 물품",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129394",
+        "service": "나라장터",
+        "category": "입찰공고 · 공사",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129394",
+        "service": "나라장터",
+        "category": "입찰공고 · 용역",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 1건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 1,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129437",
+        "service": "나라장터",
+        "category": "사전규격 · 물품",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 1건 / 지역일치 1건 / 신규·변경 1건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 1,
+        "matched_count": 1
+      },
+      {
+        "dataset": "15129437",
+        "service": "나라장터",
+        "category": "사전규격 · 공사",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129437",
+        "service": "나라장터",
+        "category": "사전규격 · 용역",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129397",
+        "service": "나라장터",
+        "category": "개찰결과 · 물품",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129397",
+        "service": "나라장터",
+        "category": "개찰결과 · 공사",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129397",
+        "service": "나라장터",
+        "category": "개찰결과 · 용역",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129397",
+        "service": "나라장터",
+        "category": "낙찰결과 · 물품",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129397",
+        "service": "나라장터",
+        "category": "낙찰결과 · 공사",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129397",
+        "service": "나라장터",
+        "category": "낙찰결과 · 용역",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129427",
+        "service": "나라장터",
+        "category": "계약 · 물품",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129427",
+        "service": "나라장터",
+        "category": "계약 · 공사",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15129427",
+        "service": "나라장터",
+        "category": "계약 · 용역",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 0건 / 지역일치 0건 / 신규·변경 0건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 0,
+        "matched_count": 0
+      },
+      {
+        "dataset": "15159012",
+        "service": "LH 전자조달",
+        "category": "입찰공고",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 83건 / 지역일치 1건 / 신규·변경 1건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 83,
+        "matched_count": 1
+      },
+      {
+        "dataset": "15159014",
+        "service": "LH 전자조달",
+        "category": "개찰결과",
+        "status": "조회 실패",
+        "code": "api_99",
+        "detail": "API 결과코드 99",
+        "checked_at": "2026-11-10T13:30:31+09:00"
+      },
+      {
+        "dataset": "15159010",
+        "service": "LH 전자조달",
+        "category": "계약",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 67건 / 지역일치 1건 / 신규·변경 1건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 67,
+        "matched_count": 1
+      },
+      {
+        "dataset": "15159013",
+        "service": "LH 전자조달",
+        "category": "발주계획",
+        "status": "성공",
+        "code": "ok",
+        "detail": "원자료 210건 / 지역일치 3건 / 신규·변경 3건",
+        "checked_at": "2026-11-10T13:30:31+09:00",
+        "raw_count": 210,
+        "matched_count": 3
+      }
+    ],
+    "new_ids": [
+      "98e52f45002b809c0a1976af",
+      "0fba90aa39b6833caf6bc41c",
+      "adf52f68889532d128b8f1c3",
+      "0bf88b66d648ee36af2fae16",
+      "7b55c6ba68d3c67266612596",
+      "a15b63b8a51dd2e39c4b79b0"
+    ],
+    "new_event_ids": [
+      "652f0cb55dab5c1b4fac5b59",
+      "76b7ff3f689b6884359d4ee6",
+      "3c83519a6d848d28de846f19",
+      "643e4f083f6bc8706c12ac1c",
+      "12050f70806a62c205b1988d",
+      "d9cc208d34c227d6ea7b08c7"
+    ],
+    "successful_sources": 18,
+    "total_sources": 19,
+    "new_count": 6,
+    "complete": false,
+    "successful_services": 7,
+    "total_services": 8
+  }
+]
