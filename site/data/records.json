@@ -878,6 +878,7 @@
     "event_id": "6d186bea6847daccea8a98c0",
     "historical_import": true,
     "change_type": "과거자료 추가",
+    "source_identity": "602be19083dafdba86642d81",
     "sources": [
       {
         "id": "a43310e2762825b7f5da634f",
@@ -1092,6 +1093,7 @@
       "orderExpectMonth": "11 ",
       "orderExpectYr": "2026 "
     },
+    "source_identity": "01fb91f6db0ab65e79249cb7",
     "sources": [
       {
         "id": "0bf88b66d648ee36af2fae16",
@@ -1152,6 +1154,7 @@
       "orderExpectMonth": "11 ",
       "orderExpectYr": "2026 "
     },
+    "source_identity": "8e5a2f198ad497df51877f9b",
     "sources": [
       {
         "id": "7b55c6ba68d3c67266612596",
@@ -1212,6 +1215,7 @@
       "orderExpectMonth": "11 ",
       "orderExpectYr": "2026 "
     },
+    "source_identity": "db96a1c85171a235087a5d0a",
     "sources": [
       {
         "id": "a15b63b8a51dd2e39c4b79b0",
