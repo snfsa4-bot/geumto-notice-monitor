@@ -42,5 +42,6 @@ LH 계약 API는 공식 Swagger에서 bidNum을 필수로 표시합니다.
 
 snfsa4-bot 계정 연결과 CLI 인증은 확인했습니다.
 새 저장소 생성 API는 Resource not accessible by integration(HTTP 403)으로 거절됐습니다.
-사용자가 새 빈 저장소 geumto-notice-monitor를 생성한 뒤 앱 접근권한을 부여해야 합니다.
+사용자가 새 빈 저장소를 생성했고, https://github.com/snfsa4-bot/geumto-notice-monitor 에 코드 업로드를 완료했습니다.
+인증키 등록 및 Pages 활성화 API는 앱 권한 부족(HTTP 403)으로 거절됐습니다. 해당 두 설정은 사용자에게 요청했습니다.
 기존 저장소는 수정하지 않았습니다.
