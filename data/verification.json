@@ -1,7 +1,215 @@
 {
-  "checked_at": "2026-11-10T13:39:07+09:00",
+  "checked_at": "2026-11-10T14:23:45+09:00",
   "method": "Fresh official API fields compared independently with stored titles, identifiers, dates and typed amount fields",
   "results": [
+    {
+      "id": "4dd3bc57c27debc768d484c4",
+      "notice_number": "R26BK01753040",
+      "title": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
+      "stage": "입찰공고",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "f4ab0cecd5d0ca83ed4ee308",
+      "notice_number": "R26BD00290720",
+      "title": "성남금토 지구외 기반시설 설치공사 지급자재(유지관리형 방음판)",
+      "stage": "사전규격",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "67deedf74faae752aa15f813",
+      "notice_number": "R26BD00292232",
+      "title": "성남금토 A-4BL 아파트 전기공사 2공구-실내조명기구",
+      "stage": "사전규격",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a1e47572a745d30d54333a59",
+      "notice_number": "R26BD00287851",
+      "title": "성남금토2 공공주택지구 지형측량(무인비행장치)용역",
+      "stage": "사전규격",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "decc23cf3edc9d308a9a4c8f",
+      "notice_number": "R26BD00291933",
+      "title": "성남금토2 공공주택지구 입체적 도시공간통합계획 설계공모",
+      "stage": "사전규격",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "446a873435294bdaf130f335",
+      "notice_number": "R26BD00293482",
+      "title": "성남금토A2BL (국민·영구임대)위탁관리용역(신규입주)",
+      "stage": "사전규격",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "db646e9a645b8e88559505c8",
+      "notice_number": "R26BK01753040",
+      "title": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
+      "stage": "개찰결과",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "46d8545b28e84c8dc625926f",
+      "notice_number": "R26BK01753040",
+      "title": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
+      "stage": "낙찰결과",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a6e8ab88e3c12fb9937bac5a",
+      "notice_number": "R26TE19085246",
+      "title": "성남금토지구 고속도로(제2경인,용인서울) 통신설비(ITS) 이설공사",
+      "stage": "계약",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a64e247a3dbd465c3a5d0f49",
+      "notice_number": "R26TE19284677",
+      "title": "금토동 464번지(금토공공주택지구 학교) 개조 급수공사",
+      "stage": "계약",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "7e817f91fde26d821bb5cc47",
+      "notice_number": "R26TE19178847",
+      "title": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
+      "stage": "계약",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "cc983023bb4170330ea68000",
+      "notice_number": "2603450",
+      "title": "성남금토 A-4BL 아파트 전기공사 2공구-디젤발전기",
+      "stage": "입찰공고",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "02303fcda993937113b095b0",
+      "notice_number": "2603482",
+      "title": "성남금토 A-4BL 2공구(토목)-혼합골재",
+      "stage": "개찰결과",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "faa06439d397fc71dfc1ca06",
+      "notice_number": "2603450",
+      "title": "성남금토 A-4BL 아파트 전기공사 2공구-디젤발전기",
+      "stage": "개찰결과",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "462fc92d1d50afd5843aaafe",
+      "notice_number": "2603219",
+      "title": "성남금토 A-4BL 아파트 건설공사 2공구-금속제창",
+      "stage": "계약",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a43310e2762825b7f5da634f",
+      "notice_number": "API 미제공",
+      "title": "성남금토2 공공주택지구 지형측량(무인비행장치)용역",
+      "stage": "발주계획",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
     {
       "id": "98e52f45002b809c0a1976af",
       "notice_number": "R26BD00296424",

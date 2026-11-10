@@ -1,6 +1,11 @@
 {
   "start_date": "2026-10-01",
-  "backfill": null,
+  "backfill": {
+    "from": "2026-10-01",
+    "to": "2026-11-10",
+    "checked_at": "2026-11-10T14:23:45+09:00",
+    "complete": true
+  },
   "api_services": 8,
   "partner_boards": 5
 }

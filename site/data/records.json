@@ -1,5 +1,892 @@
 [
   {
+    "id": "4dd3bc57c27debc768d484c4",
+    "fingerprint": "50f947688f1ba041d985ccd9",
+    "title": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
+    "service": "나라장터",
+    "category": "입찰공고 · 용역",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "2026-10-01 14:12:17",
+    "publication_date": "2026-10-01",
+    "agency": "경기주택도시공사",
+    "notice_id": "R26BK01753040",
+    "sequence": "000",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "239817600",
+        "field": "asignBdgtAmt"
+      },
+      {
+        "label": "추정가격",
+        "value": "218016000",
+        "field": "presmptPrce"
+      }
+    ],
+    "amount": "배정예산 239817600 / 추정가격 218016000",
+    "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753040&bidPbancOrd=000",
+    "source_detail_verified": true,
+    "areas": [
+      "기반시설"
+    ],
+    "references": {
+      "bidNtceNo": "R26BK01753040",
+      "bfSpecRgstNo": "R26BD00270482",
+      "refNo": "경기주택도시공사 공고 제2026-0501호"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "239817600",
+      "bfSpecRgstNo": "R26BD00270482",
+      "bidNtceDt": "2026-10-01 14:12:17",
+      "bidNtceNm": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
+      "bidNtceNo": "R26BK01753040",
+      "bidNtceOrd": "000",
+      "opengDt": "2026-10-07 15:00:00",
+      "presmptPrce": "218016000",
+      "rgstDt": "2026-10-01 14:12:17"
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "ff29f38cad02e43840263d50",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "4dd3bc57c27debc768d484c4",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753040&bidPbancOrd=000"
+      }
+    ]
+  },
+  {
+    "id": "f4ab0cecd5d0ca83ed4ee308",
+    "fingerprint": "81f833ba149fabdad7854de2",
+    "title": "성남금토 지구외 기반시설 설치공사 지급자재(유지관리형 방음판)",
+    "service": "나라장터",
+    "category": "사전규격 · 물품",
+    "stage": "사전규격",
+    "base_stage": "사전규격",
+    "date": "2026-10-27 09:44:35",
+    "publication_date": "2026-10-27",
+    "agency": "조달청 인천지방조달청",
+    "notice_id": "R26BD00290720",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "647536820",
+        "field": "asignBdgtAmt"
+      }
+    ],
+    "amount": "배정예산 647536820",
+    "url": "https://www.g2b.go.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "기반시설"
+    ],
+    "references": {
+      "bfSpecRgstNo": "R26BD00290720",
+      "refNo": "계약총괄부-12288"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "647536820",
+      "bfSpecRgstNo": "R26BD00290720",
+      "prdctClsfcNoNm": "성남금토 지구외 기반시설 설치공사 지급자재(유지관리형 방음판)",
+      "rcptDt": "2026-10-27 09:44:35",
+      "rgstDt": "2026-10-27 09:44:33"
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "d0d4191bc6310f00193de5ab",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "f4ab0cecd5d0ca83ed4ee308",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/"
+      }
+    ]
+  },
+  {
+    "id": "67deedf74faae752aa15f813",
+    "fingerprint": "00d9b621de8d4462d684fadd",
+    "title": "성남금토 A-4BL 아파트 전기공사 2공구-실내조명기구",
+    "service": "나라장터",
+    "category": "사전규격 · 물품",
+    "stage": "사전규격",
+    "base_stage": "사전규격",
+    "date": "2026-10-29 14:17:23",
+    "publication_date": "2026-10-29",
+    "agency": "조달청 서울지방조달청",
+    "notice_id": "R26BD00292232",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "2041012220",
+        "field": "asignBdgtAmt"
+      }
+    ],
+    "amount": "배정예산 2041012220",
+    "url": "https://www.g2b.go.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL",
+      "기반시설"
+    ],
+    "references": {
+      "bfSpecRgstNo": "R26BD00292232",
+      "refNo": "경기남부주택품질3팀-2508 / 20260703"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "2041012220",
+      "bfSpecRgstNo": "R26BD00292232",
+      "prdctClsfcNoNm": "성남금토 A-4BL 아파트 전기공사 2공구-실내조명기구",
+      "rcptDt": "2026-10-29 14:17:23",
+      "rgstDt": "2026-10-29 14:17:21"
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "8ce20485e30e01577f12e07a",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "67deedf74faae752aa15f813",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/"
+      }
+    ]
+  },
+  {
+    "id": "a1e47572a745d30d54333a59",
+    "fingerprint": "319c6ddbb96e4311b0a2476d",
+    "title": "성남금토2 공공주택지구 지형측량(무인비행장치)용역",
+    "service": "나라장터",
+    "category": "사전규격 · 용역",
+    "stage": "사전규격",
+    "base_stage": "사전규격",
+    "date": "2026-10-20 23:41:02",
+    "publication_date": "2026-10-20",
+    "agency": "한국토지주택공사",
+    "notice_id": "R26BD00287851",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "43208000",
+        "field": "asignBdgtAmt"
+      }
+    ],
+    "amount": "배정예산 43208000",
+    "url": "https://www.g2b.go.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "금토2"
+    ],
+    "references": {
+      "bfSpecRgstNo": "R26BD00287851",
+      "refNo": "20261020233001"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "43208000",
+      "bfSpecRgstNo": "R26BD00287851",
+      "prdctClsfcNoNm": "성남금토2 공공주택지구 지형측량(무인비행장치)용역",
+      "rcptDt": "2026-10-20 23:41:02",
+      "rgstDt": "2026-10-20 23:41:02"
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "45fda48659d98371dcdaebac",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "a1e47572a745d30d54333a59",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/"
+      }
+    ]
+  },
+  {
+    "id": "decc23cf3edc9d308a9a4c8f",
+    "fingerprint": "2797fdeca716f01cdf12f944",
+    "title": "성남금토2 공공주택지구 입체적 도시공간통합계획 설계공모",
+    "service": "나라장터",
+    "category": "사전규격 · 용역",
+    "stage": "사전규격",
+    "base_stage": "사전규격",
+    "date": "2026-10-28 23:41:20",
+    "publication_date": "2026-10-28",
+    "agency": "한국토지주택공사",
+    "notice_id": "R26BD00291933",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "7408830000",
+        "field": "asignBdgtAmt"
+      }
+    ],
+    "amount": "배정예산 7408830000",
+    "url": "https://www.g2b.go.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "금토2"
+    ],
+    "references": {
+      "bfSpecRgstNo": "R26BD00291933",
+      "refNo": "20261028233001"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "7408830000",
+      "bfSpecRgstNo": "R26BD00291933",
+      "prdctClsfcNoNm": "성남금토2 공공주택지구 입체적 도시공간통합계획 설계공모",
+      "rcptDt": "2026-10-28 23:41:20",
+      "rgstDt": "2026-10-28 23:41:20"
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "a7df2e376ab026371e16c0df",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "decc23cf3edc9d308a9a4c8f",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/"
+      }
+    ]
+  },
+  {
+    "id": "446a873435294bdaf130f335",
+    "fingerprint": "b730eaf5e52152be1a557b2c",
+    "title": "성남금토A2BL (국민·영구임대)위탁관리용역(신규입주)",
+    "service": "나라장터",
+    "category": "사전규격 · 용역",
+    "stage": "사전규격",
+    "base_stage": "사전규격",
+    "date": "2026-11-02 13:53:52",
+    "publication_date": "2026-11-02",
+    "agency": "한국토지주택공사",
+    "notice_id": "R26BD00293482",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "19734444",
+        "field": "asignBdgtAmt"
+      }
+    ],
+    "amount": "배정예산 19734444",
+    "url": "https://www.g2b.go.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {
+      "bfSpecRgstNo": "R26BD00293482",
+      "refNo": "20261030233002"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "19734444",
+      "bfSpecRgstNo": "R26BD00293482",
+      "prdctClsfcNoNm": "성남금토A2BL (국민·영구임대)위탁관리용역(신규입주)",
+      "rcptDt": "2026-11-02 13:53:52",
+      "rgstDt": "2026-11-02 13:53:52"
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "5750f3468a8e3c5a6f99f317",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "446a873435294bdaf130f335",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/"
+      }
+    ]
+  },
+  {
+    "id": "db646e9a645b8e88559505c8",
+    "fingerprint": "c0f51a962c3e7802cea16255",
+    "title": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
+    "service": "나라장터",
+    "category": "개찰결과 · 용역",
+    "stage": "개찰결과",
+    "base_stage": "개찰결과",
+    "date": "2026-10-07 15:00:00",
+    "publication_date": "2026-10-07",
+    "agency": "경기주택도시공사",
+    "notice_id": "R26BK01753040",
+    "sequence": "000",
+    "amounts": [],
+    "amount": "",
+    "url": "https://www.g2b.go.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "기반시설"
+    ],
+    "references": {
+      "bidNtceNo": "R26BK01753040"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidNtceNm": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
+      "bidNtceNo": "R26BK01753040",
+      "bidNtceOrd": "000",
+      "opengDt": "2026-10-07 15:00:00"
+    },
+    "opening_note": "개찰 결과는 최종 낙찰·계약체결을 의미하지 않습니다",
+    "bidder_rows": 1,
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "33ade1dfc5859c102c465ded",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "db646e9a645b8e88559505c8",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/"
+      }
+    ]
+  },
+  {
+    "id": "46d8545b28e84c8dc625926f",
+    "fingerprint": "fb071c7267059b5b50e30148",
+    "title": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
+    "service": "나라장터",
+    "category": "낙찰결과 · 용역",
+    "stage": "낙찰결과",
+    "base_stage": "낙찰결과",
+    "date": "2026-10-22",
+    "publication_date": "2026-10-22",
+    "agency": "경기주택도시공사",
+    "notice_id": "R26BK01753040",
+    "sequence": "000",
+    "amounts": [
+      {
+        "label": "최종낙찰금액",
+        "value": "207068600",
+        "field": "sucsfbidAmt"
+      }
+    ],
+    "amount": "최종낙찰금액 207068600",
+    "url": "https://www.g2b.go.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "기반시설"
+    ],
+    "references": {
+      "bidNtceNo": "R26BK01753040"
+    },
+    "vendor": "주식회사 세영통신",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidNtceNm": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
+      "bidNtceNo": "R26BK01753040",
+      "bidNtceOrd": "000",
+      "fnlSucsfDate": "2026-10-22",
+      "rgstDt": "2026-10-22 17:43:41",
+      "sucsfbidAmt": "207068600"
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "298e602cd14c36e1d7e11174",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "46d8545b28e84c8dc625926f",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/"
+      }
+    ]
+  },
+  {
+    "id": "a6e8ab88e3c12fb9937bac5a",
+    "fingerprint": "8172efefcc35e113c9bcb324",
+    "title": "성남금토지구 고속도로(제2경인,용인서울) 통신설비(ITS) 이설공사",
+    "service": "나라장터",
+    "category": "계약 · 공사",
+    "stage": "계약",
+    "base_stage": "계약",
+    "date": "2026-10-21",
+    "publication_date": "2026-10-21",
+    "agency": "경기주택도시공사",
+    "notice_id": "R26TE19085246",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "총계약금액",
+        "value": "650079350",
+        "field": "totCntrctAmt"
+      },
+      {
+        "label": "금차계약금액",
+        "value": "650079350",
+        "field": "thtmCntrctAmt"
+      }
+    ],
+    "amount": "총계약금액 650079350 / 금차계약금액 650079350",
+    "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02335518&ctrtChgOrd=00&prcmBsneSeCd=조070004&srchName=ctrtCrst&openUrl=Y",
+    "source_detail_verified": true,
+    "areas": [
+      "기반시설"
+    ],
+    "references": {
+      "ntceNo": "R26BK01742228",
+      "cntrctRefNo": "R26TA0233551800"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "cnstwkNm": "성남금토지구 고속도로(제2경인,용인서울) 통신설비(ITS) 이설공사",
+      "cntrctCnclsDate": "2026-10-21",
+      "rgstDt": "2026-10-21 16:07:26",
+      "thtmCntrctAmt": "650079350",
+      "totCntrctAmt": "650079350",
+      "untyCntrctNo": "R26TE19085246"
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "5be25648a163575c62257330",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "a6e8ab88e3c12fb9937bac5a",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02335518&ctrtChgOrd=00&prcmBsneSeCd=조070004&srchName=ctrtCrst&openUrl=Y"
+      }
+    ]
+  },
+  {
+    "id": "a64e247a3dbd465c3a5d0f49",
+    "fingerprint": "5838334d9fb0687565087c3b",
+    "title": "금토동 464번지(금토공공주택지구 학교) 개조 급수공사",
+    "service": "나라장터",
+    "category": "계약 · 공사",
+    "stage": "계약",
+    "base_stage": "계약",
+    "date": "2026-10-27",
+    "publication_date": "2026-10-27",
+    "agency": "경기도 성남시 맑은물관리사업소",
+    "notice_id": "R26TE19284677",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "총계약금액",
+        "value": "14700000",
+        "field": "totCntrctAmt"
+      },
+      {
+        "label": "금차계약금액",
+        "value": "14700000",
+        "field": "thtmCntrctAmt"
+      }
+    ],
+    "amount": "총계약금액 14700000 / 금차계약금액 14700000",
+    "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02359047&ctrtChgOrd=00&prcmBsneSeCd=조070004&srchName=ctrtCrst&openUrl=Y",
+    "source_detail_verified": true,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {
+      "cntrctRefNo": "R26TA0235904700"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "cnstwkNm": "금토동 464번지(금토공공주택지구 학교) 개조 급수공사",
+      "cntrctCnclsDate": "2026-10-27",
+      "rgstDt": "2026-10-27 13:01:10",
+      "thtmCntrctAmt": "14700000",
+      "totCntrctAmt": "14700000",
+      "untyCntrctNo": "R26TE19284677"
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "83c3dbc7c6e2ee583cfaed69",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "a64e247a3dbd465c3a5d0f49",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02359047&ctrtChgOrd=00&prcmBsneSeCd=조070004&srchName=ctrtCrst&openUrl=Y"
+      }
+    ]
+  },
+  {
+    "id": "7e817f91fde26d821bb5cc47",
+    "fingerprint": "5935eb47eb3084a5eba89971",
+    "title": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
+    "service": "나라장터",
+    "category": "계약 · 용역",
+    "stage": "계약",
+    "base_stage": "계약",
+    "date": "2026-10-23",
+    "publication_date": "2026-10-23",
+    "agency": "경기주택도시공사",
+    "notice_id": "R26TE19178847",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "총계약금액",
+        "value": "207068600",
+        "field": "totCntrctAmt"
+      },
+      {
+        "label": "금차계약금액",
+        "value": "207068600",
+        "field": "thtmCntrctAmt"
+      }
+    ],
+    "amount": "총계약금액 207068600 / 금차계약금액 207068600",
+    "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02347289&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+    "source_detail_verified": true,
+    "areas": [
+      "기반시설"
+    ],
+    "references": {
+      "ntceNo": "R26BK01753040",
+      "cntrctRefNo": "R26TA0234728900"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "cntrctCnclsDate": "2026-10-23",
+      "cntrctNm": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
+      "rgstDt": "2026-10-23 17:13:40",
+      "thtmCntrctAmt": "207068600",
+      "totCntrctAmt": "207068600",
+      "untyCntrctNo": "R26TE19178847"
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "58902983e3fb455f348e5d7c",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "7e817f91fde26d821bb5cc47",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02347289&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y"
+      }
+    ]
+  },
+  {
+    "id": "cc983023bb4170330ea68000",
+    "fingerprint": "4cbb73953fabec0048fbbc33",
+    "title": "성남금토 A-4BL 아파트 전기공사 2공구-디젤발전기",
+    "service": "LH 전자조달",
+    "category": "입찰공고",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "20261001",
+    "publication_date": "2026-10-01",
+    "agency": "한국토지주택공사",
+    "notice_id": "2603450",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "449546000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "449546000",
+        "field": "designPrc"
+      }
+    ],
+    "amount": "기초금액 449546000 / 설계금액 449546000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL",
+      "기반시설"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2603450",
+      "bidnmKor": "성남금토 A-4BL 아파트 전기공사 2공구-디젤발전기 ",
+      "designPrc": "449546000 ",
+      "fdmtlAmt": "449546000 ",
+      "openDtm": "2026/10/08 11:00 ",
+      "tndrbidRegDt": "20261001 "
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "7e90dda4348ea2118fc72b86",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "cc983023bb4170330ea68000",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "02303fcda993937113b095b0",
+    "fingerprint": "ea881dfdeb7e9df9f813fc1c",
+    "title": "성남금토 A-4BL 2공구(토목)-혼합골재",
+    "service": "LH 전자조달",
+    "category": "개찰결과",
+    "stage": "개찰결과",
+    "base_stage": "개찰결과",
+    "date": "2026/10/07 11:00",
+    "publication_date": "2026-10-07",
+    "agency": "한국토지주택공사",
+    "notice_id": "2603482",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "68970000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "68970000",
+        "field": "designPrc"
+      },
+      {
+        "label": "예정가격",
+        "value": "69254000",
+        "field": "expectPrc"
+      }
+    ],
+    "amount": "기초금액 68970000 / 설계금액 68970000 / 예정가격 69254000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2603482",
+      "bidnmKor": "성남금토 A-4BL 2공구(토목)-혼합골재 ",
+      "designPrc": "68970000 ",
+      "expectPrc": "69254000 ",
+      "fdmtlAmt": "68970000 ",
+      "openDtm": "2026/10/07 11:00 "
+    },
+    "opening_note": "개찰 결과는 최종 낙찰·계약체결을 의미하지 않습니다",
+    "bidder_rows": 1,
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "44000f346fda5e6cb10d7e9f",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "02303fcda993937113b095b0",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "faa06439d397fc71dfc1ca06",
+    "fingerprint": "0e8d457c8efe8b9c79f9b963",
+    "title": "성남금토 A-4BL 아파트 전기공사 2공구-디젤발전기",
+    "service": "LH 전자조달",
+    "category": "개찰결과",
+    "stage": "개찰결과",
+    "base_stage": "개찰결과",
+    "date": "2026/10/08 11:00",
+    "publication_date": "2026-10-08",
+    "agency": "한국토지주택공사",
+    "notice_id": "2603450",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "449546000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "449546000",
+        "field": "designPrc"
+      },
+      {
+        "label": "예정가격",
+        "value": "448772000",
+        "field": "expectPrc"
+      }
+    ],
+    "amount": "기초금액 449546000 / 설계금액 449546000 / 예정가격 448772000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL",
+      "기반시설"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2603450",
+      "bidnmKor": "성남금토 A-4BL 아파트 전기공사 2공구-디젤발전기 ",
+      "designPrc": "449546000 ",
+      "expectPrc": "448772000 ",
+      "fdmtlAmt": "449546000 ",
+      "openDtm": "2026/10/08 11:00 "
+    },
+    "opening_note": "개찰 결과는 최종 낙찰·계약체결을 의미하지 않습니다",
+    "bidder_rows": 27,
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "f57e2cfafe509a59e71fad70",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "faa06439d397fc71dfc1ca06",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "462fc92d1d50afd5843aaafe",
+    "fingerprint": "32acdd5fc2764aa4c79634ee",
+    "title": "성남금토 A-4BL 아파트 건설공사 2공구-금속제창",
+    "service": "LH 전자조달",
+    "category": "계약",
+    "stage": "계약",
+    "base_stage": "계약",
+    "date": "20261001",
+    "publication_date": "2026-10-01",
+    "agency": "경기남부 사업관리처 조달계약팀",
+    "notice_id": "2603219",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "계약금액",
+        "value": "177180645",
+        "field": "ctrctAmt"
+      }
+    ],
+    "amount": "계약금액 177180645",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL"
+    ],
+    "references": {},
+    "vendor": "주식회사서해건업",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidNum": "2603219",
+      "ctrctAmt": "177180645 ",
+      "ctrctCntrctgDt": "20261001 ",
+      "ctrctNm": "성남금토 A-4BL 아파트 건설공사 2공구-금속제창 "
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "e84333bdda8590ca900d1a6e",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "462fc92d1d50afd5843aaafe",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "a43310e2762825b7f5da634f",
+    "fingerprint": "5f54590ee8033f5a5681e660",
+    "title": "성남금토2 공공주택지구 지형측량(무인비행장치)용역",
+    "service": "LH 전자조달",
+    "category": "발주계획",
+    "stage": "발주계획",
+    "base_stage": "발주계획",
+    "date": "20261020",
+    "publication_date": "2026-10-20",
+    "agency": "공공택지사업처",
+    "notice_id": "",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "설계금액",
+        "value": "43208000",
+        "field": "odrplanDesignAmt"
+      },
+      {
+        "label": "지급자재금액",
+        "value": "0",
+        "field": "odrplanPayrrsAmt"
+      },
+      {
+        "label": "합계금액",
+        "value": "43208000",
+        "field": "cstrtnSumAmt"
+      }
+    ],
+    "amount": "설계금액 43208000 / 지급자재금액 0 / 합계금액 43208000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "금토2"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "aprvlDt": "20261020 ",
+      "bsnsNm": "성남금토2 공공주택지구 지형측량(무인비행장치)용역 ",
+      "cstrtnSumAmt": "43208000 ",
+      "odrplanDesignAmt": "43208000 ",
+      "odrplanPayrrsAmt": "0 ",
+      "orderExpectMonth": "10 ",
+      "orderExpectYr": "2026 "
+    },
+    "first_seen": "2026-11-10T14:17:00+09:00",
+    "observed_at": "2026-11-10T14:17:00+09:00",
+    "event_id": "6d186bea6847daccea8a98c0",
+    "historical_import": true,
+    "change_type": "과거자료 추가",
+    "sources": [
+      {
+        "id": "a43310e2762825b7f5da634f",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
     "id": "98e52f45002b809c0a1976af",
     "fingerprint": "7658906d05fa4df7fdf70bf3",
     "title": "성남금토 스마트도시 정보통신공사-금속기둥",
@@ -35,6 +922,13 @@
     "event_id": "652f0cb55dab5c1b4fac5b59",
     "change_type": "신규",
     "publication_date": "2026-11-06",
+    "source_fields": {
+      "asignBdgtAmt": "272412380",
+      "bfSpecRgstNo": "R26BD00296424",
+      "prdctClsfcNoNm": "성남금토 스마트도시 정보통신공사-금속기둥",
+      "rcptDt": "2026-11-06 17:20:42",
+      "rgstDt": "2026-11-06 17:20:39"
+    },
     "sources": [
       {
         "id": "98e52f45002b809c0a1976af",
@@ -81,6 +975,15 @@
     "event_id": "76b7ff3f689b6884359d4ee6",
     "change_type": "신규",
     "publication_date": "2026-11-09",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2603962",
+      "bidnmKor": "성남금토2 공공주택지구 지형측량(무인비행장치)용역 ",
+      "designPrc": "43208000 ",
+      "fdmtlAmt": "43208000 ",
+      "openDtm": "2026/11/18 11:00 ",
+      "tndrbidRegDt": "20261109 "
+    },
     "sources": [
       {
         "id": "0fba90aa39b6833caf6bc41c",
@@ -123,6 +1026,12 @@
     "event_id": "3c83519a6d848d28de846f19",
     "change_type": "신규",
     "publication_date": "2026-11-05",
+    "source_fields": {
+      "bidNum": "2603450",
+      "ctrctAmt": "403922000 ",
+      "ctrctCntrctgDt": "20261105 ",
+      "ctrctNm": "성남금토 A-4BL 아파트 전기공사 2공구-디젤발전기 "
+    },
     "sources": [
       {
         "id": "adf52f68889532d128b8f1c3",
@@ -174,6 +1083,15 @@
     "event_id": "643e4f083f6bc8706c12ac1c",
     "change_type": "신규",
     "publication_date": "2026-10-30",
+    "source_fields": {
+      "aprvlDt": "20261030 ",
+      "bsnsNm": "성남금토A2BL(국민·영구임대) 위탁관리용역(신규입주) ",
+      "cstrtnSumAmt": "19734444 ",
+      "odrplanDesignAmt": "19734444 ",
+      "odrplanPayrrsAmt": "0 ",
+      "orderExpectMonth": "11 ",
+      "orderExpectYr": "2026 "
+    },
     "sources": [
       {
         "id": "0bf88b66d648ee36af2fae16",
@@ -225,6 +1143,15 @@
     "event_id": "12050f70806a62c205b1988d",
     "change_type": "신규",
     "publication_date": "2026-10-28",
+    "source_fields": {
+      "aprvlDt": "20261028 ",
+      "bsnsNm": "성남금토2 공공주택지구 조사설계용역 ",
+      "cstrtnSumAmt": "7408830000 ",
+      "odrplanDesignAmt": "7408830000 ",
+      "odrplanPayrrsAmt": "0 ",
+      "orderExpectMonth": "11 ",
+      "orderExpectYr": "2026 "
+    },
     "sources": [
       {
         "id": "7b55c6ba68d3c67266612596",
@@ -276,6 +1203,15 @@
     "event_id": "d9cc208d34c227d6ea7b08c7",
     "change_type": "신규",
     "publication_date": "2026-10-22",
+    "source_fields": {
+      "aprvlDt": "20261022 ",
+      "bsnsNm": "(재공고)성남금토 A-4BL 2공구(토목)-혼합골재 ",
+      "cstrtnSumAmt": "0 ",
+      "odrplanDesignAmt": "104500000 ",
+      "odrplanPayrrsAmt": "0 ",
+      "orderExpectMonth": "11 ",
+      "orderExpectYr": "2026 "
+    },
     "sources": [
       {
         "id": "a15b63b8a51dd2e39c4b79b0",
