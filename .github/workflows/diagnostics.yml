@@ -1,0 +1,24 @@
+name: API 연결 진단
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - name: Bounded official API probes without credential logging
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: python -m app.diagnose
+      - uses: actions/upload-artifact@v4
+        with:
+          name: official-api-diagnostics
+          path: diagnostics/api-probe.json
+          retention-days: 7

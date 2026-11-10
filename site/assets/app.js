@@ -18,7 +18,7 @@ function renderRecords(){
     const card=node('article',{className:'record-card'}), top=node('div',{className:'record-top'});
     top.append(node('span',{className:'pill'},r.stage||'공고'),node('span',{},r.service||'출처 미확인'),node('span',{},fmt(r.date)));
     card.append(top,node('h3',{},r.title||'제목 없음'));
-    const info=node('div',{className:'record-info'}); for (const x of [`공고번호 ${r.notice_id||'미확인'}`,`금액 ${r.amount||'미확인'}`,r.agency||'기관 미확인']) info.append(node('span',{},x));card.append(info);card.append(node('a',{href:`notices/${encodeURIComponent(r.id)}.html`},'상세·변경 이력 보기'));
+    const info=node('div',{className:'record-info'}); for (const x of [`공고번호 ${r.notice_id||'미확인'}`,`금액 ${r.amount||'미확인'}`,r.agency||'기관 미확인']) info.append(node('span',{},x));card.append(info);if(r.sources?.length>1){card.append(node('p',{},`동일 공고 출처 ${r.sources.length}개 · 상세 기록에서 비교`));}card.append(node('a',{href:`notices/${encodeURIComponent(r.id)}.html`},'상세·변경 이력 보기'));
     const u=safeURL(r.url);if(u){const a=node('a',{href:u,target:'_blank',rel:'noopener noreferrer',className:'record-open'},r.source_detail_verified?'원문 바로가기 ↗':'공식 사이트 검색 ↗');card.append(a);if(!r.source_detail_verified)card.append(node('span',{className:'unverified'},'공식 목록 링크 · 상세주소 미확인'));}
     $('record-list').append(card);
   }

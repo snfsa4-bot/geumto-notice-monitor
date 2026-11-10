@@ -1,0 +1,196 @@
+{
+  "run_url": "https://github.com/snfsa4-bot/geumto-notice-monitor/actions/runs/42756095858",
+  "scope": "First-page connection probes; nationwide totalCount is not the count of Geumto notices.",
+  "results": [
+    {
+      "service": "나라장터",
+      "category": "사전규격 · 물품",
+      "endpoint": "https://apis.data.go.kr/1230000/ao/HrcspSsstndrdInfoService/getPublicPrcureThngInfoThngPPSSrch",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 1233
+    },
+    {
+      "service": "나라장터",
+      "category": "입찰공고 · 공사",
+      "endpoint": "https://apis.data.go.kr/1230000/ad/BidPublicInfoService02/getBidPblancListInfoCnstwkPPSSrch02",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 2992
+    },
+    {
+      "service": "나라장터",
+      "category": "입찰공고 · 물품",
+      "endpoint": "https://apis.data.go.kr/1230000/ad/BidPublicInfoService02/getBidPblancListInfoThngPPSSrch02",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 3048
+    },
+    {
+      "service": "나라장터",
+      "category": "입찰공고 · 용역",
+      "endpoint": "https://apis.data.go.kr/1230000/ad/BidPublicInfoService02/getBidPblancListInfoServcPPSSrch02",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 4020
+    },
+    {
+      "service": "나라장터",
+      "category": "사전규격 · 공사",
+      "endpoint": "https://apis.data.go.kr/1230000/ao/HrcspSsstndrdInfoService/getPublicPrcureThngInfoCnstwkPPSSrch",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 75
+    },
+    {
+      "service": "나라장터",
+      "category": "사전규격 · 용역",
+      "endpoint": "https://apis.data.go.kr/1230000/ao/HrcspSsstndrdInfoService/getPublicPrcureThngInfoServcPPSSrch",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 1951
+    },
+    {
+      "service": "나라장터",
+      "category": "개찰결과 · 물품",
+      "endpoint": "https://apis.data.go.kr/1230000/as/ScsbidInfoService/getOpengResultListInfoThngPPSSrch",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 501
+    },
+    {
+      "service": "나라장터",
+      "category": "개찰결과 · 공사",
+      "endpoint": "https://apis.data.go.kr/1230000/as/ScsbidInfoService/getOpengResultListInfoCnstwkPPSSrch",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 675
+    },
+    {
+      "service": "나라장터",
+      "category": "개찰결과 · 용역",
+      "endpoint": "https://apis.data.go.kr/1230000/as/ScsbidInfoService/getOpengResultListInfoServcPPSSrch",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 424
+    },
+    {
+      "service": "나라장터",
+      "category": "계약 · 물품",
+      "endpoint": "https://apis.data.go.kr/1230000/ao/CntrctInfoService/getCntrctInfoListThngPPSSrch",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 6513
+    },
+    {
+      "service": "나라장터",
+      "category": "계약 · 공사",
+      "endpoint": "https://apis.data.go.kr/1230000/ao/CntrctInfoService/getCntrctInfoListCnstwkPPSSrch",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 15329
+    },
+    {
+      "service": "나라장터",
+      "category": "계약 · 용역",
+      "endpoint": "https://apis.data.go.kr/1230000/ao/CntrctInfoService/getCntrctInfoListServcPPSSrch",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 13113
+    },
+    {
+      "service": "나라장터",
+      "category": "낙찰결과 · 물품",
+      "endpoint": "https://apis.data.go.kr/1230000/as/ScsbidInfoService/getScsbidListSttusThngPPSSrch",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 332
+    },
+    {
+      "service": "나라장터",
+      "category": "낙찰결과 · 용역",
+      "endpoint": "https://apis.data.go.kr/1230000/as/ScsbidInfoService/getScsbidListSttusServcPPSSrch",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 238
+    },
+    {
+      "service": "나라장터",
+      "category": "낙찰결과 · 공사",
+      "endpoint": "https://apis.data.go.kr/1230000/as/ScsbidInfoService/getScsbidListSttusCnstwkPPSSrch",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 309
+    },
+    {
+      "service": "LH 전자조달",
+      "category": "계약",
+      "endpoint": "https://apis.data.go.kr/B552555/OpenContractInfoList/getOpenContractInfo",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 67
+    },
+    {
+      "service": "LH 전자조달",
+      "category": "개찰결과",
+      "endpoint": "https://apis.data.go.kr/B552555/OpenTenderopenList/getOpenTenderopenList",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 6870
+    },
+    {
+      "service": "LH 전자조달",
+      "category": "발주계획",
+      "endpoint": "https://apis.data.go.kr/B552555/OpenOrdergPlanLis/getOpenOrdergPlanLis",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 210
+    },
+    {
+      "service": "LH 전자조달",
+      "category": "입찰공고",
+      "endpoint": "https://apis.data.go.kr/B552555/OpenBidInfoList/getOpenBidInfo",
+      "period_days": 7,
+      "checked_at": "2026-11-10T13:28:41+09:00",
+      "http_status": 200,
+      "status": "success",
+      "total_count": 83
+    }
+  ]
+}

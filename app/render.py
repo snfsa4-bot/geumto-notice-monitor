@@ -5,6 +5,7 @@ from collections import defaultdict
 from pathlib import Path
 from urllib.parse import urlparse
 from app.collector import atomic_write
+from app.linking import merge_latest,explicit_related
 ROOT=Path(__file__).resolve().parents[1]
 DATA=ROOT/'data/state.json'
 SITE=ROOT/'site'
@@ -27,10 +28,14 @@ def run():
     for name in ('data','posts','notices'):(SITE/name).mkdir(parents=True,exist_ok=True)
     by_id=defaultdict(list)
     for r in records:by_id[r['id']].append(r)
-    atomic_write(SITE/'data/records.json',[items[0] for items in by_id.values()])
+    latest=[items[0] for items in by_id.values()]
+    atomic_write(SITE/'data/records.json',merge_latest(latest))
     atomic_write(SITE/'data/runs.json',runs)
     for ident,items in by_id.items():
-        (SITE/'notices'/f'{ident}.html').write_text(page(items[0]['title'],''.join(item_block(r,True) for r in items)))
+        related=explicit_related(items[0],latest)
+        links=''.join(f'<p><a href="{e(r["id"])}.html">{e(r.get("stage"))} · {e(r.get("service"))} · {e(r.get("title"))}</a></p>' for r in related)
+        content=''.join(item_block(r,True) for r in items)+(('<h2>공고번호·명시 참조번호로 연결된 기록</h2>'+links) if links else '')
+        (SITE/'notices'/f'{ident}.html').write_text(page(items[0]['title'],content))
     days=defaultdict(list)
     for r in runs:days[r['date']].append(r)
     for date,checks in days.items():

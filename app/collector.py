@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import logging
 import os
 import re
 import sys
@@ -16,6 +17,8 @@ from zoneinfo import ZoneInfo
 import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
+
+logging.getLogger("urllib3").setLevel(logging.CRITICAL)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data'
@@ -145,13 +148,16 @@ def request_params(source,key,start,end):
         p.update(type='json',inqryDiv='1')
         if stage=='계약':
             p.update(inqryBgnDate=start.strftime('%Y%m%d'),inqryEndDate=end.strftime('%Y%m%d'))
+            field='cnstwkNm' if 'Cnstwk' in url else 'cntrctNm' if 'Servc' in url else 'prdctClsfcNoNm'
+            p[field]='금토'
         else:
             p.update(inqryBgnDt=start.strftime('%Y%m%d%H%M'),inqryEndDt=end.strftime('%Y%m%d%H%M'))
+            p['prdctClsfcNoNm' if stage=='사전규격' else 'bidNtceNm']='금토'
     elif stage=='입찰공고': p.update(tndrbidRegDtStart=start.strftime('%Y%m%d'),tndrbidRegDtEnd=end.strftime('%Y%m%d'))
     elif stage=='개찰결과': p.update(openDtmStart=start.strftime('%Y%m%d'),openDtmEnd=end.strftime('%Y%m%d'))
     elif stage=='계약':
-        # Portal marks bidNum mandatory. Never silently claim full coverage.
-        raise FeedError('spec_ambiguity','공식 명세상 계약번호 bidNum 필수: 기간 전체조회 지원 여부 실검증 필요')
+        # Empty bidNum verified against live API on 2026-11-10: HTTP 200, totalCount 67.
+        p.update(contractDtStart=start.strftime('%Y%m%d'),contractDtEnd=end.strftime('%Y%m%d'),bidNum='')
     else: p.update(orderExpectYmStart=start.strftime('%Y%m'),orderExpectYmEnd=end.strftime('%Y%m'))
     return p
 
@@ -233,6 +239,7 @@ def run(days=3):
             except requests.RequestException: status.update(status='조회 실패',code='network_error',detail='통신 오류 또는 재시도 소진. 인증키를 포함한 요청 URL은 기록하지 않습니다.')
             except (ValueError,ET.ParseError,KeyError,TypeError): status.update(status='조회 실패',code='schema_error',detail='응답 형식 또는 필드가 명세와 다릅니다. 검토 필요.')
         statuses.append(status)
+        print(json.dumps({'source':category,'service':service,'status':status['status'],'code':status['code']},ensure_ascii=False),flush=True)
     stamp=now.isoformat(timespec='seconds')
     new_run={'date':now.strftime('%Y-%m-%d'),'checked_at':stamp,'lookback_days':days,'statuses':statuses,'new_ids':[r['id'] for r in fresh],'new_event_ids':[r['event_id'] for r in fresh],'successful_sources':sum(s['status']=='성공' for s in statuses),'total_sources':len(statuses),'new_count':len(fresh),'complete':all(s['status']=='성공' for s in statuses)}
     new_run['successful_services']=sum(all(s['status']=='성공' for s in statuses if s['dataset']==dataset) for dataset in CONTRACTS)

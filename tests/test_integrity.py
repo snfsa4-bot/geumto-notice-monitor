@@ -24,9 +24,6 @@ def test_all_operations_exist_in_official_schema():
 def test_source_specific_parameters_are_official():
     start=datetime(2026,11,3,tzinfo=KST);end=datetime(2026,11,10,tzinfo=KST)
     for source in SOURCES:
-        if source[0]=='LH 전자조달' and source[3]=='계약':
-            with pytest.raises(FeedError): request_params(source,'dummy',start,end)
-            continue
         params=request_params(source,'dummy',start,end)
         schema=next(c for c in CONTRACTS.values() if source[2].startswith('https://'+c['host']+'/'))
         operation=source[2].rsplit('/',1)[1]
