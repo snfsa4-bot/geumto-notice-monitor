@@ -16,6 +16,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlparse
 from zoneinfo import ZoneInfo
 import requests
+from app.dates import START_DATE,date_key,in_scope,windows
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
@@ -141,7 +142,7 @@ def normalize(rec, service, category, stage):
     has_detail=bool(url)
     url=url or ('https://www.g2b.go.kr/' if service=='나라장터' else 'https://ebid.lh.or.kr/')
     identity=[service,stage,notice_id or title,sequence, pick(rec,'bidClsfcNo','rbidNo')]
-    return {'id':digest(identity),'fingerprint':digest(rec),'title':title,'service':service,'category':category,'stage':stage,'base_stage':stage,'date':at,'agency':agency,'notice_id':notice_id,'sequence':sequence,'amounts':amounts,'amount':' / '.join(x['label']+' '+x['value'] for x in amounts),'url':url,'source_detail_verified':has_detail,'areas':areas_for(title),'references':{k:str(rec[k]) for k in ('bidNtceNo','bfSpecRgstNo','bidNtceNoList','ntceNo','refNo','cntrctRefNo') if rec.get(k)},'vendor':pick(rec,'bidwinnrNm','ctrctVndrNm'),'evidence':'제목 또는 사업·현장 필드에서 성남금토 연관성 확인'}
+    return {'id':digest(identity),'fingerprint':digest(rec),'title':title,'service':service,'category':category,'stage':stage,'base_stage':stage,'date':at,'publication_date':date_key(at),'agency':agency,'notice_id':notice_id,'sequence':sequence,'amounts':amounts,'amount':' / '.join(x['label']+' '+x['value'] for x in amounts),'url':url,'source_detail_verified':has_detail,'areas':areas_for(title),'references':{k:str(rec[k]) for k in ('bidNtceNo','bfSpecRgstNo','bidNtceNoList','ntceNo','refNo','cntrctRefNo') if rec.get(k)},'vendor':pick(rec,'bidwinnrNm','ctrctVndrNm'),'evidence':'제목 또는 사업·현장 필드에서 성남금토 연관성 확인'}
 
 def request_params(source,key,start,end):
     service,category,url,stage=source
@@ -178,18 +179,23 @@ def request_page(session,url,params):
         return rows,total
     raise FeedError('retry_exhausted','제공기관 오류 재시도 소진')
 
-def fetch_source(session,source,key,now,days=3):
+def fetch_source(session,source,key,now,days=3,start=None,page_size=100):
     service,category,url,stage=source
-    params=request_params(source,key,now-timedelta(days=days),now)
+    params=request_params(source,key,start or now-timedelta(days=days),now)
     rows=[];seen_pages=set();expected=None
     for request_index in range(1,1001):
         # Some LH pages fail if a page extends past totalCount. Request an exact tail.
-        limit=min(100,expected-len(rows)) if expected is not None else 100
+        limit=min(page_size,expected-len(rows)) if expected is not None else page_size
         size=next(n for n in range(limit,0,-1) if len(rows)%n==0)
         params['numOfRows']=size
         page=len(rows)//size+1
         params['pageNo']=page
-        batch,total=request_page(session,url,params)
+        try:
+            batch,total=request_page(session,url,params)
+        except FeedError as ex:
+            if request_index==1 and page_size>100 and ex.code in {'api_10','api_99','api_08'}:
+                return fetch_source(session,source,key,now,days,start,100)
+            raise
         if expected is not None and total is not None and total!=expected: raise FeedError('changing_total','페이지 조회 중 전체 건수 변경: 재조회 필요')
         if total is not None: expected=total
         fingerprint=digest(batch)
@@ -209,6 +215,8 @@ def fetch_source(session,source,key,now,days=3):
     for group in groups.values():
         n=group[0][0]
         n['fingerprint']=digest(sorted((digest(r) for _,r in group)))
+        evidence_fields=set(AMOUNTS)|{'bidNtceNo','bidNtceOrd','bfSpecRgstNo','bidNum','bidDegree','untyCntrctNo','bidNtceNm','prdctClsfcNoNm','cnstwkNm','cntrctNm','ctrctNm','bidnmKor','bsnsNm','bidNtceDt','tndrbidRegDt','rcptDt','fnlSucsfDate','rgstDt','openDtm','opengDt','cntrctCnclsDate','ctrctCntrctgDt','aprvlDt','orderExpectYr','orderExpectMonth'}
+        n['source_fields']={k:str(group[0][1][k]) for k in sorted(evidence_fields) if group[0][1].get(k) is not None}
         if stage=='개찰결과': n['opening_note']='개찰 결과는 최종 낙찰·계약체결을 의미하지 않습니다';n['bidder_rows']=len(group)
         items.append(n)
     return items, len(rows)
@@ -222,53 +230,79 @@ def atomic_write(path,value):
     finally:
         if os.path.exists(tmp): os.unlink(tmp)
 
-def run(days=3):
+def fetch_period(session,source,key,start,end):
+    chunks=[(start,end)] if source[0]=='LH 전자조달' and source[3]=='발주계획' else list(windows(start,end))
+    found={};raw_count=0
+    for begin,stop in chunks:
+        page_size=500 if source[0]=='LH 전자조달' and source[3]=='개찰결과' else 100
+        items,count=fetch_source(session,source,key,stop,start=begin,page_size=page_size)
+        raw_count+=count
+        for item in items:found[item['id']]=item
+    return list(found.values()),raw_count,len(chunks)
+
+def ingest(items,state,seen,fresh,now,backfill=False):
+    first_seen={r['id']:r.get('first_seen') for r in reversed(state.get('records',[]))}
+    for item in items:
+        item['publication_date']=date_key(item.get('date'))
+        if not in_scope(item.get('date'),now.date().isoformat()):continue
+        if seen.get(item['id'])==item['fingerprint']:
+            for existing in state.get('records',[]):
+                if existing['id']==item['id'] and existing.get('fingerprint')==item['fingerprint']:
+                    existing.update(item)
+                    if existing.get('change_type')=='변경':existing['stage']=item['stage']+' · 내용변경'
+            continue
+        changed=item['id'] in seen
+        item['first_seen']=first_seen.get(item['id']) or now.isoformat(timespec='seconds')
+        item['observed_at']=now.isoformat(timespec='seconds')
+        item['event_id']=digest([item['id'],item['fingerprint']])
+        item['historical_import']=backfill and not changed
+        item['change_type']='변경' if changed else '과거자료 추가' if backfill else '신규'
+        if changed:item['stage']+=' · 내용변경'
+        fresh.append(item);seen[item['id']]=item['fingerprint']
+
+def run(days=3,since=None,include_partner=False):
     now=datetime.now(KST);state_file=DATA/'state.json'
+    start=datetime.fromisoformat(since).replace(tzinfo=KST) if since else now-timedelta(days=days)
+    start=max(start,datetime.fromisoformat(START_DATE).replace(tzinfo=KST))
+    if start>now:raise ValueError('조회 시작일이 오늘보다 늦습니다')
     state=json.loads(state_file.read_text()) if state_file.exists() else {'records':[],'runs':[],'fingerprints':{}}
     key=os.environ.get('DATA_GO_KR_KEY','').strip()
     session=requests.Session()
     session.mount('https://',HTTPAdapter(max_retries=Retry(total=3,backoff_factor=1,status_forcelist=[429,500,502,503,504],allowed_methods=['GET'],respect_retry_after_header=True)))
-    fresh=[];statuses=[];seen=dict(state.get('fingerprints',{}));first_seen={r['id']:r.get('first_seen') for r in reversed(state.get('records',[]))}
+    fresh=[];statuses=[];seen=dict(state.get('fingerprints',{}))
     for source in SOURCES:
         service,category,url,stage=source
         dataset=next(k for k,v in CONTRACTS.items() if url.startswith('https://'+v['host']+'/'))
-        status={'dataset':dataset,'service':service,'category':category,'status':'미설정','code':'missing_key','detail':'인증키가 없어 API를 조회하지 못했습니다.','checked_at':now.isoformat(timespec='seconds')}
+        status={'dataset':dataset,'service':service,'category':category,'status':'미설정','code':'missing_key','detail':'인증키가 없어 API를 조회하지 못했습니다.','query_from':start.isoformat(),'query_to':now.isoformat()}
         if key:
             try:
-                items,raw_count=fetch_source(session,source,key,now,days)
-                count=0
-                for item in items:
-                    if seen.get(item['id'])==item['fingerprint']:
-                        # Refresh corrected presentation fields without inventing a source revision.
-                        for existing in state.get('records',[]):
-                            if existing['id']==item['id'] and existing.get('fingerprint')==item['fingerprint']:
-                                existing.update(item)
-                                if existing.get('change_type')=='변경':existing['stage']=item['stage']+' · 내용변경'
-                        continue
-                    changed=item['id'] in seen
-                    item['first_seen']=first_seen.get(item['id']) or now.isoformat(timespec='seconds')
-                    item['observed_at']=now.isoformat(timespec='seconds')
-                    item['event_id']=digest([item['id'],item['fingerprint']])
-                    item['change_type']='변경' if changed else '신규'
-                    if changed: item['stage']+=' · 내용변경'
-                    fresh.append(item);seen[item['id']]=item['fingerprint'];count+=1
-                status.update(status='성공',code='ok',detail=f'원자료 {raw_count}건 / 지역일치 {len(items)}건 / 신규·변경 {count}건',raw_count=raw_count,matched_count=len(items))
-            except FeedError as ex: status.update(status='조회 실패',code=ex.code,detail=str(ex))
-            except requests.RequestException: status.update(status='조회 실패',code='network_error',detail='통신 오류 또는 재시도 소진. 인증키를 포함한 요청 URL은 기록하지 않습니다.')
-            except (ValueError,ET.ParseError,KeyError,TypeError): status.update(status='조회 실패',code='schema_error',detail='응답 형식 또는 필드가 명세와 다릅니다. 검토 필요.')
-        status['checked_at']=datetime.now(KST).isoformat(timespec='seconds')
-        statuses.append(status)
+                items,raw_count,window_count=fetch_period(session,source,key,start,now)
+                undated=sum(not date_key(r.get('date')) for r in items)
+                items=[r for r in items if in_scope(r.get('date'),now.date().isoformat())]
+                previous=len(fresh);ingest(items,state,seen,fresh,now,bool(since))
+                status.update(status='성공',code='ok',detail=f'기간분할 {window_count}회 / 원자료 {raw_count}행 / 기간·지역 일치 {len(items)}건 / 추가·변경 {len(fresh)-previous}건',raw_count=raw_count,matched_count=len(items))
+                if undated:status.update(status='조회 불완전',code='date_unverified',detail=status['detail']+f' / 날짜 미확인 {undated}건 제외·검토 필요')
+            except FeedError as ex:status.update(status='조회 실패',code=ex.code,detail=str(ex))
+            except requests.RequestException:status.update(status='조회 실패',code='network_error',detail='통신 오류 또는 재시도 소진. 인증키를 포함한 요청 URL은 기록하지 않습니다.')
+            except (ValueError,ET.ParseError,KeyError,TypeError):status.update(status='조회 실패',code='schema_error',detail='응답 형식 또는 필드가 명세와 다릅니다. 검토 필요.')
+        status['checked_at']=datetime.now(KST).isoformat(timespec='seconds');statuses.append(status)
         print(json.dumps({'source':category,'service':service,'status':status['status'],'code':status['code']},ensure_ascii=False),flush=True)
+    if include_partner:
+        from app.partner import collect
+        partner_items,partner_statuses,_=collect(session,now.date().isoformat())
+        ingest(partner_items,state,seen,fresh,now,bool(since));statuses.extend(partner_statuses)
     stamp=datetime.now(KST).isoformat(timespec='seconds')
-    new_run={'date':now.strftime('%Y-%m-%d'),'started_at':now.isoformat(timespec='seconds'),'checked_at':stamp,'lookback_days':days,'statuses':statuses,'new_ids':[r['id'] for r in fresh],'new_event_ids':[r['event_id'] for r in fresh],'successful_sources':sum(s['status']=='성공' for s in statuses),'total_sources':len(statuses),'new_count':len(fresh),'complete':all(s['status']=='성공' for s in statuses)}
-    new_run['successful_services']=sum(all(s['status']=='성공' for s in statuses if s['dataset']==dataset) for dataset in CONTRACTS)
-    new_run['total_services']=len(CONTRACTS)
-    state.update(fingerprints=seen,records=fresh+state.get('records',[]),runs=[new_run]+state.get('runs',[]))
+    datasets=set(CONTRACTS)|({'partner'} if include_partner else set())
+    new_run={'date':now.strftime('%Y-%m-%d'),'started_at':now.isoformat(timespec='seconds'),'checked_at':stamp,'lookback_days':days,'query_from':start.isoformat(),'query_to':now.isoformat(),'backfill':bool(since),'statuses':statuses,'new_ids':[r['id'] for r in fresh],'new_event_ids':[r['event_id'] for r in fresh],'successful_sources':sum(s['status']=='성공' for s in statuses),'total_sources':len(statuses),'new_count':len(fresh),'historical_count':sum(r.get('historical_import',False) for r in fresh),'complete':all(s['status']=='성공' for s in statuses)}
+    new_run['successful_services']=sum(all(s['status']=='성공' for s in statuses if s['dataset']==dataset) for dataset in datasets)
+    new_run['total_services']=len(datasets)
+    state.update(start_date=START_DATE,fingerprints=seen,records=fresh+state.get('records',[]),runs=[new_run]+state.get('runs',[]))
+    if since:state['backfill']={'from':START_DATE,'to':now.date().isoformat(),'checked_at':stamp,'complete':new_run['complete']}
     atomic_write(state_file,state)
     print(json.dumps({k:new_run[k] for k in ('successful_sources','total_sources','new_count','complete')},ensure_ascii=False))
-    if os.environ.get('REQUIRE_COMPLETE_RUN')=='1' and not new_run['complete']: return 2
+    if os.environ.get('REQUIRE_COMPLETE_RUN')=='1' and not new_run['complete']:return 2
     return 0
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--days',type=int,default=3,choices=range(1,32));args=parser.parse_args()
-    sys.exit(run(args.days))
+    parser=argparse.ArgumentParser();parser.add_argument('--days',type=int,default=3,choices=range(1,32));parser.add_argument('--since',type=str);parser.add_argument('--partner',action='store_true');args=parser.parse_args()
+    sys.exit(run(args.days,args.since,args.partner))

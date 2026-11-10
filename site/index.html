@@ -23,24 +23,25 @@
         <div class="hero-text">
           <p class="eyebrow"><span class="live-dot"></span> 성남금토 공공조달 모니터링</p>
           <h1>금토지구의 변화를<br /><em>놓치지 않도록.</em></h1>
-          <p class="hero-sub">성남금토 1·2지구와 A-4BL 관련 입찰, 자재·공법, 낙찰·계약 정보를 한곳에서 확인합니다.</p>
+          <p class="hero-sub">2026년 10월 1일부터 성남금토 1·2지구와 A-4BL 관련 입찰, 자재·공법, 낙찰·계약 정보를 확인합니다.</p>
           <a class="hero-link" href="#latest">공고 확인하기 <span>↗</span></a>
         </div>
         <div class="hero-art" aria-hidden="true"><div class="mapline a"></div><div class="mapline b"></div><div class="mapline c"></div><div class="mapline d"></div><span class="orbit o1"></span><span class="orbit o2"></span><span class="orbit o3"></span><div class="hero-tag">GEUMTO<br />DISTRICT <strong>01—02</strong></div></div>
       </section>
-      <div class="hero-bottom"><div><span>DATA SOURCES</span><strong>나라장터 + LH 전자조달</strong></div><div><span>UPDATE</span><strong>매일 오전 9시 예정 · KST</strong></div><div><span>STATUS</span><strong id="sync-status">연동 준비 중</strong></div></div>
+      <div class="hero-bottom"><div><span>DATA SOURCES</span><strong>나라장터 · LH e-Bid · LH 파트너몰</strong></div><div><span>UPDATE</span><strong>매일 오전 9시 예정 · KST</strong></div><div><span>STATUS</span><strong id="sync-status">연동 준비 중</strong></div></div>
       <section class="overview" aria-label="현황 요약">
         <div class="metric"><span>누적 공고·결과</span><strong id="metric-total">—</strong><small>중복 제외, 게시 기록</small></div>
-        <div class="metric"><span>최근 7일</span><strong id="metric-week">—</strong><small>새로 확인된 자료</small></div>
+        <div class="metric"><span>최근 7일</span><strong id="metric-week">—</strong><small>원자료 기준일 기준</small></div>
         <div class="metric"><span>마지막 정상 조회</span><strong class="metric-date" id="metric-updated">미연결</strong><small>조회 실패는 별도 표기</small></div>
       </section>
       <section id="latest" class="content-block">
         <div class="section-heading"><div><span class="section-kicker">LATEST UPDATES</span><h2>최신 공고와 진행 결과</h2><p>관심 있는 블록을 선택하거나 검색어를 입력해 보세요.</p></div><div class="check-note">공고번호 · 낙찰업체 · 금액 · 원문</div></div>
         <div class="toolbar"><div class="tabs" id="filter-tabs" role="group" aria-label="지역 필터"><button class="tab active" data-filter="전체" type="button">전체</button><button class="tab" data-filter="A-4BL" type="button">A-4BL</button><button class="tab" data-filter="금토2" type="button">금토2지구</button><button class="tab" data-filter="금토1" type="button">금토1지구</button><button class="tab" data-filter="기반시설" type="button">기반시설</button></div><label class="search-field"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><input id="query" type="search" aria-label="공고 검색" placeholder="공고명·업체·공고번호 검색" /></label></div>
-        <div class="toolbar"><label>단계 <select id="stage"><option value="">전체</option><option>발주계획</option><option>사전규격</option><option>입찰공고</option><option>개찰결과</option><option>낙찰결과</option><option>계약</option></select></label><label>확인 기간 <input id="from" type="date" aria-label="확인 시작일"> ~ <input id="to" type="date" aria-label="확인 종료일"></label></div>
+        <div class="toolbar"><label>단계 <select id="stage"><option value="">전체</option><option>발주계획</option><option>사전규격</option><option>입찰공고</option><option>개찰결과</option><option>낙찰결과</option><option>계약</option><option>공모</option><option>선정심의 결과</option><option>기술 반영</option><option>공지</option><option>심의위원 선정</option></select></label><label>원자료 기간 <input id="from" type="date" aria-label="확인 시작일"> ~ <input id="to" type="date" aria-label="확인 종료일"></label></div>
         <div id="record-list" class="record-list" aria-live="polite"><div class="empty-state"><span class="empty-symbol">↗</span><h3>공고 데이터 연동 준비 중</h3><p>API 연결 후 실제 확인된 공고만 이곳에 표시합니다. 검증되지 않은 사례 데이터는 넣지 않았습니다.</p></div></div>
         <p class="source-caption">공식 입찰·계약 데이터 기반 비공식 정보 서비스입니다. 게시 시점과 사이트 반영 시간에는 차이가 있을 수 있으며 최종 내용은 반드시 원문을 확인해 주세요.</p>
       </section>
+      <section class="content-block"><div class="section-heading"><div><span class="section-kicker">SINCE OCTOBER 2026</span><h2>원자료 날짜별 기록</h2><p>2026년 10월 1일 이후 자료 · 과거 공고를 당일 신규 공고로 표시하지 않습니다.</p></div></div><div id="history-list" class="archive-list"></div></section>
       <section id="archive" class="content-block archive-section"><div class="section-heading"><div><span class="section-kicker">DAILY ARCHIVE</span><h2>날짜별 모니터링 기록</h2><p>새 소식이 없는 날에도 조회 상태를 남깁니다.</p></div></div><div id="archive-list" class="archive-list"><p class="archive-placeholder">아직 게시된 일일 기록이 없습니다.</p></div></section>
       <section id="status" class="content-block status-section"><div class="section-heading"><div><span class="section-kicker">TRANSPARENCY</span><h2>수집 시스템 상태</h2><p>수집 실패는 '공고 없음'으로 처리하지 않습니다.</p></div></div><div class="table-wrap"><table><thead><tr><th>연동 대상</th><th>상태</th><th>확인 내용</th></tr></thead><tbody id="status-body"><tr><td>나라장터 · LH</td><td><span class="status-wait">연동 전</span></td><td>공공데이터 인증키와 실 API 호출 검증 필요</td></tr></tbody></table></div></section>
     </main>

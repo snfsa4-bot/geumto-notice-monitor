@@ -7,6 +7,10 @@ on:
         default: '7'
         type: choice
         options: ['3', '7']
+      since_date:
+        description: '과거자료 시작일 (전체 반영: 2026-10-01, 평소에는 비움)'
+        default: ''
+        type: string
   schedule:
     # UTC 00:00 = 한국시간 09:00. GitHub 예약은 지연될 수 있습니다.
     - cron: '0 0 * * *'
@@ -39,9 +43,15 @@ jobs:
           DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
           REQUIRE_COMPLETE_RUN: '1'
           LOOKBACK: ${{ inputs.lookback_days || '3' }}
-        run: python -m app.collector --days "$LOOKBACK"
+          SINCE: ${{ inputs.since_date }}
+        run: |
+          if [ -n "$SINCE" ]; then
+            python -m app.collector --since "$SINCE" --partner
+          else
+            python -m app.collector --days "$LOOKBACK" --partner
+          fi
       - name: Independently compare seven-day records with official fields
-        if: inputs.lookback_days == '7'
+        if: inputs.lookback_days == '7' || inputs.since_date != ''
         id: verify
         continue-on-error: true
         env:
@@ -53,7 +63,7 @@ jobs:
         run: |
           git config user.name 'geumto-daily-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data site/data site/posts site/notices
+          git add data site/data site/posts site/notices site/history
           if ! git diff --cached --quiet; then
             git commit -m "Record procurement query results"
             git push

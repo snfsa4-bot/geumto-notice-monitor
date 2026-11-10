@@ -1,0 +1,65 @@
+{
+  "items": [],
+  "statuses": [
+    {
+      "dataset": "partner",
+      "service": "LH 기술혁신파트너몰",
+      "category": "공모·심의 계획",
+      "status": "성공",
+      "code": "ok",
+      "detail": "공개 목록 3건 확인 / 시작일 이전 3건 제외 / 기간·지역 일치 0건",
+      "matched_count": 0,
+      "scanned_count": 3,
+      "excluded_before_start": 3,
+      "checked_at": "2026-11-10T14:12:11+09:00"
+    },
+    {
+      "dataset": "partner",
+      "service": "LH 기술혁신파트너몰",
+      "category": "선정심의 결과",
+      "status": "성공",
+      "code": "ok",
+      "detail": "공개 목록 6건 확인 / 시작일 이전 6건 제외 / 기간·지역 일치 0건",
+      "matched_count": 0,
+      "scanned_count": 6,
+      "excluded_before_start": 6,
+      "checked_at": "2026-11-10T14:12:12+09:00"
+    },
+    {
+      "dataset": "partner",
+      "service": "LH 기술혁신파트너몰",
+      "category": "특정공법·자재 반영현황",
+      "status": "성공",
+      "code": "ok",
+      "detail": "공개 목록 0건 확인 / 시작일 이전 0건 제외 / 기간·지역 일치 0건",
+      "matched_count": 0,
+      "scanned_count": 0,
+      "excluded_before_start": 0,
+      "checked_at": "2026-11-10T14:12:13+09:00"
+    },
+    {
+      "dataset": "partner",
+      "service": "LH 기술혁신파트너몰",
+      "category": "공지사항",
+      "status": "성공",
+      "code": "ok",
+      "detail": "공개 목록 10건 확인 / 시작일 이전 10건 제외 / 기간·지역 일치 0건",
+      "matched_count": 0,
+      "scanned_count": 10,
+      "excluded_before_start": 10,
+      "checked_at": "2026-11-10T14:12:14+09:00"
+    },
+    {
+      "dataset": "partner",
+      "service": "LH 기술혁신파트너몰",
+      "category": "심의위원 선정결과",
+      "status": "성공",
+      "code": "ok",
+      "detail": "공개 목록 30건 확인 / 시작일 이전 16건 제외 / 기간·지역 일치 0건",
+      "matched_count": 0,
+      "scanned_count": 30,
+      "excluded_before_start": 16,
+      "checked_at": "2026-11-10T14:12:47+09:00"
+    }
+  ]
+}
