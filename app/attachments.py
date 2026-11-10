@@ -39,13 +39,15 @@ def extract(data,name='',depth=0):
             if not doc.exists('FileHeader'):raise AttachmentError('지원하지 않는 OLE 문서')
             flags=struct.unpack_from('<I',doc.openstream('FileHeader').read(),36)[0]
             if flags&2:raise AttachmentError('암호화된 HWP')
-            chunks=[]
+            chunks=[];remaining=LIMIT
             for path in doc.listdir():
                 if len(path)==2 and path[0]=='BodyText' and path[1].startswith('Section'):
                     raw=doc.openstream(path).read()
                     if flags&1:
                         decoder=zlib.decompressobj(-15);raw=decoder.decompress(raw,LIMIT+1)
                         if len(raw)>LIMIT:raise AttachmentError('HWP 압축 해제 제한')
+                    remaining-=len(raw)
+                    if remaining<0:raise AttachmentError('HWP 전체 본문 크기 제한')
                     offset=0
                     while offset+4<=len(raw):
                         header=struct.unpack_from('<I',raw,offset)[0];offset+=4

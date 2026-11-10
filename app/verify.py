@@ -28,6 +28,10 @@ def run():
             if source not in cache:
                 all_rows=[]
                 intervals=[(start,now)] if source[0]=='LH 전자조달' and source[3]=='발주계획' else list(windows(start,now))
+                if source[0]=='LH 전자조달' and source[3]=='개찰결과':
+                    from app.dates import date_key
+                    dates={date_key(n['date']) for n in latest.values() if n['service']==source[0] and n['category']==source[1]}
+                    intervals=[(datetime.fromisoformat(day).replace(tzinfo=KST),datetime.fromisoformat(day).replace(tzinfo=KST)+timedelta(days=1)-timedelta(seconds=1)) for day in sorted(dates) if day]
                 for begin,end in intervals:
                     params=request_params(source,key,begin,end);expected=None;window_rows=[]
                     page_size=500 if source[0]=='LH 전자조달' and source[3]=='개찰결과' else 100
@@ -41,11 +45,11 @@ def run():
                     else:raise RuntimeError('Verification pagination incomplete')
                     all_rows.extend(window_rows)
                 cache[source]=all_rows
-            candidates=[r for r in cache[source] if first(r,TITLE_FIELDS)==notice['title'] and first(r,NUMBER_FIELDS)==notice['notice_id']]
+            candidates=[r for r in cache[source] if first(r,TITLE_FIELDS)==notice['title'] and first(r,NUMBER_FIELDS)==notice['notice_id'] and first(r,DATE_FIELDS[notice['base_stage']])==notice['date']]
             checks=compare(notice,candidates[0]) if candidates else {'record_found':False}
             result={'id':notice['id'],'notice_number':notice['notice_id'] or 'API 미제공','title':notice['title'],'stage':notice['base_stage'],'checks':checks,'passed':all(checks.values())}
             results.append(result);print(json.dumps(result,ensure_ascii=False),flush=True)
-    report={'checked_at':now.isoformat(timespec='seconds'),'method':'Fresh official API fields compared independently with stored titles, identifiers, dates and typed amount fields','results':results,'passed':bool(results) and all(r['passed'] for r in results)}
+    report={'started_at':now.isoformat(timespec='seconds'),'checked_at':datetime.now(KST).isoformat(timespec='seconds'),'method':'Fresh official API fields compared independently with stored titles, identifiers, dates and typed amount fields','results':results,'passed':bool(results) and all(r['passed'] for r in results)}
     atomic_write(ROOT/'data/verification.json',report)
     if not report['passed']:raise SystemExit(2)
 if __name__=='__main__':run()

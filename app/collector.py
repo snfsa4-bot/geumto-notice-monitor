@@ -141,7 +141,7 @@ def normalize(rec, service, category, stage):
     except ValueError: url=''
     has_detail=bool(url)
     url=url or ('https://www.g2b.go.kr/' if service=='나라장터' else 'https://ebid.lh.or.kr/')
-    identity=[service,stage,notice_id or title,sequence, pick(rec,'bidClsfcNo','rbidNo')]
+    identity=[service,stage,notice_id,sequence,pick(rec,'bidClsfcNo','rbidNo')] if notice_id else [service,stage,title,agency,at,pick(rec,'orderExpectYr'),pick(rec,'orderExpectMonth')]
     return {'id':digest(identity),'fingerprint':digest(rec),'title':title,'service':service,'category':category,'stage':stage,'base_stage':stage,'date':at,'publication_date':date_key(at),'agency':agency,'notice_id':notice_id,'sequence':sequence,'amounts':amounts,'amount':' / '.join(x['label']+' '+x['value'] for x in amounts),'url':url,'source_detail_verified':has_detail,'areas':areas_for(title),'references':{k:str(rec[k]) for k in ('bidNtceNo','bfSpecRgstNo','bidNtceNoList','ntceNo','refNo','cntrctRefNo') if rec.get(k)},'vendor':pick(rec,'bidwinnrNm','ctrctVndrNm'),'evidence':'제목 또는 사업·현장 필드에서 성남금토 연관성 확인'}
 
 def request_params(source,key,start,end):
@@ -244,28 +244,44 @@ def ingest(items,state,seen,fresh,now,backfill=False):
     first_seen={r['id']:r.get('first_seen') for r in reversed(state.get('records',[]))}
     for item in items:
         item['publication_date']=date_key(item.get('date'))
+        if not item.get('notice_id'):
+            source_identity=item['id']
+            legacy=next((r for r in state.get('records',[]) if not r.get('notice_id') and r.get('service')==item.get('service') and r.get('base_stage')==item.get('base_stage') and (r.get('source_identity')==source_identity or (not r.get('source_identity') and all(r.get(k)==item.get(k) for k in ('title','date','agency'))))),None)
+            if legacy:
+                item['id']=legacy['id']
+                if not legacy.get('source_identity') and all(legacy.get(k)==item.get(k) for k in ('title','date','agency','amounts')):
+                    seen[item['id']]=item['fingerprint']
+                    legacy.update(item)
+            item['source_identity']=source_identity
         if not in_scope(item.get('date'),now.date().isoformat()):continue
         if seen.get(item['id'])==item['fingerprint']:
             for existing in state.get('records',[]):
                 if existing['id']==item['id'] and existing.get('fingerprint')==item['fingerprint']:
                     existing.update(item)
+                    if existing.get('historical_import') and existing.get('publication_date')==existing.get('first_seen','')[:10]:
+                        existing['historical_import']=False
+                        if existing.get('change_type')=='과거자료 추가':existing['change_type']='신규'
                     if existing.get('change_type')=='변경':existing['stage']=item['stage']+' · 내용변경'
             continue
         changed=item['id'] in seen
         item['first_seen']=first_seen.get(item['id']) or now.isoformat(timespec='seconds')
         item['observed_at']=now.isoformat(timespec='seconds')
         item['event_id']=digest([item['id'],item['fingerprint']])
-        item['historical_import']=backfill and not changed
-        item['change_type']='변경' if changed else '과거자료 추가' if backfill else '신규'
+        is_history=bool(backfill and not changed and item['publication_date']<now.date().isoformat())
+        item['historical_import']=is_history
+        item['change_type']='변경' if changed else '과거자료 추가' if is_history else '신규'
         if changed:item['stage']+=' · 내용변경'
         fresh.append(item);seen[item['id']]=item['fingerprint']
 
 def run(days=3,since=None,include_partner=False):
     now=datetime.now(KST);state_file=DATA/'state.json'
+    state=json.loads(state_file.read_text()) if state_file.exists() else {'records':[],'runs':[],'fingerprints':{}}
     start=datetime.fromisoformat(since).replace(tzinfo=KST) if since else now-timedelta(days=days)
+    if not since:
+        last_good=next((r for r in state.get('runs',[]) if r.get('complete') and r.get('checked_at')),None)
+        if last_good:start=min(start,datetime.fromisoformat(last_good['checked_at']).astimezone(KST)-timedelta(days=1))
     start=max(start,datetime.fromisoformat(START_DATE).replace(tzinfo=KST))
     if start>now:raise ValueError('조회 시작일이 오늘보다 늦습니다')
-    state=json.loads(state_file.read_text()) if state_file.exists() else {'records':[],'runs':[],'fingerprints':{}}
     key=os.environ.get('DATA_GO_KR_KEY','').strip()
     session=requests.Session()
     session.mount('https://',HTTPAdapter(max_retries=Retry(total=3,backoff_factor=1,status_forcelist=[429,500,502,503,504],allowed_methods=['GET'],respect_retry_after_header=True)))
@@ -276,7 +292,9 @@ def run(days=3,since=None,include_partner=False):
         status={'dataset':dataset,'service':service,'category':category,'status':'미설정','code':'missing_key','detail':'인증키가 없어 API를 조회하지 못했습니다.','query_from':start.isoformat(),'query_to':now.isoformat()}
         if key:
             try:
-                items,raw_count,window_count=fetch_period(session,source,key,start,now)
+                source_start=datetime.fromisoformat(START_DATE).replace(tzinfo=KST) if service=='LH 전자조달' and stage=='발주계획' else start
+                status['query_from']=source_start.isoformat()
+                items,raw_count,window_count=fetch_period(session,source,key,source_start,now)
                 undated=sum(not date_key(r.get('date')) for r in items)
                 items=[r for r in items if in_scope(r.get('date'),now.date().isoformat())]
                 previous=len(fresh);ingest(items,state,seen,fresh,now,bool(since))
@@ -297,7 +315,7 @@ def run(days=3,since=None,include_partner=False):
     new_run['successful_services']=sum(all(s['status']=='성공' for s in statuses if s['dataset']==dataset) for dataset in datasets)
     new_run['total_services']=len(datasets)
     state.update(start_date=START_DATE,fingerprints=seen,records=fresh+state.get('records',[]),runs=[new_run]+state.get('runs',[]))
-    if since:state['backfill']={'from':START_DATE,'to':now.date().isoformat(),'checked_at':stamp,'complete':new_run['complete']}
+    if since:state['backfill']={'from':start.date().isoformat(),'to':now.date().isoformat(),'checked_at':stamp,'complete':new_run['complete']}
     atomic_write(state_file,state)
     print(json.dumps({k:new_run[k] for k in ('successful_sources','total_sources','new_count','complete')},ensure_ascii=False))
     if os.environ.get('REQUIRE_COMPLETE_RUN')=='1' and not new_run['complete']:return 2

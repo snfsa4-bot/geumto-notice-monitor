@@ -50,3 +50,44 @@ def test_detail_date_is_not_validity_period_or_view_count():
 
 def test_unreadable_attachment_is_not_empty_text():
     with pytest.raises(AttachmentError):extract(b'unknown binary','sample.hwp')
+
+def test_render_keeps_only_requested_original_dates(tmp_path,monkeypatch):
+    import json
+    from app import render
+    data=tmp_path/'state.json'
+    data.write_text(json.dumps({'start_date':'2026-10-01','records':[{'id':'sept','title':'성남금토 이전 자료','date':'20260930','service':'LH 전자조달'},{'id':'oct','title':'성남금토 기준일 자료','date':'20261001','service':'LH 전자조달'}],'runs':[]}))
+    monkeypatch.setattr(render,'DATA',data);monkeypatch.setattr(render,'SITE',tmp_path/'site')
+    render.run()
+    records=json.loads((tmp_path/'site/data/records.json').read_text())
+    assert [r['id'] for r in records]==['oct']
+    assert (tmp_path/'site/history/2026-10-01.html').exists()
+    assert not (tmp_path/'site/history/2026-09-30.html').exists()
+
+def test_daily_collection_recovers_a_gap_longer_than_three_days(tmp_path,monkeypatch):
+    import json
+    from app import collector
+    class Clock(datetime):
+        @classmethod
+        def now(cls,tz=None):return cls(2026,11,10,14,tzinfo=KST)
+    (tmp_path/'state.json').write_text(json.dumps({'records':[],'fingerprints':{},'runs':[{'complete':True,'checked_at':'2026-10-10T09:00:00+09:00'}]}))
+    monkeypatch.setattr(collector,'DATA',tmp_path);monkeypatch.setattr(collector,'datetime',Clock)
+    monkeypatch.delenv('DATA_GO_KR_KEY',raising=False)
+    collector.run(3)
+    state=json.loads((tmp_path/'state.json').read_text())
+    assert state['runs'][0]['query_from'].startswith('2026-10-09')
+
+def test_plans_without_notice_number_do_not_merge_different_periods():
+    from app.collector import normalize
+    a=normalize({'bsnsNm':'성남금토 기반시설','aprvlDt':'20261005','orderExpectYr':'2026','orderExpectMonth':'10'},'LH 전자조달','발주계획','발주계획')
+    b=normalize({'bsnsNm':'성남금토 기반시설','aprvlDt':'20261005','orderExpectYr':'2026','orderExpectMonth':'11'},'LH 전자조달','발주계획','발주계획')
+    assert a['id']!=b['id']
+
+def test_legacy_plan_link_survives_identity_migration_without_fake_revision():
+    now=datetime(2026,11,10,14,tzinfo=KST)
+    legacy={'id':'public-old','fingerprint':'old-fp','title':'성남금토 계획','service':'LH 전자조달','base_stage':'발주계획','stage':'발주계획','date':'20261022','agency':'LH','amounts':[],'first_seen':'2026-11-10T13:00:00+09:00'}
+    item={k:v for k,v in legacy.items() if k!='first_seen'};item.update(id='strong-new-key',fingerprint='new-fp')
+    state={'records':[legacy]};seen={'public-old':'old-fp'};fresh=[]
+    ingest([item],state,seen,fresh,now,True)
+    assert not fresh and state['records'][0]['id']=='public-old'
+    assert state['records'][0]['source_identity']=='strong-new-key'
+    assert state['records'][0]['first_seen']=='2026-11-10T13:00:00+09:00'

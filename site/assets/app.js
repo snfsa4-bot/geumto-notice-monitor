@@ -51,6 +51,7 @@ async function main(){
     $('sync-status').textContent=last?(stale?'예약 조회 지연 · 최신 상태 확인 필요':last.complete?'정상 조회':`조회 불완전 (${last.successful_services??last.successful_sources}/${last.total_services??last.total_sources})`):'연동 준비 중';
     renderRuns(runs||[]);renderStatus(last);renderRecords();
     const datesResponse=await fetch('data/dates.json',{cache:'no-cache'});if(!datesResponse.ok)throw Error('날짜별 기록 읽기 실패');
+    const coverageResponse=await fetch('data/coverage.json',{cache:'no-cache'});if(coverageResponse.ok){const coverage=await coverageResponse.json();$('coverage-status').textContent=coverage.backfill?`수집 범위 ${coverage.start_date} ~ ${coverage.backfill.to} · 과거자료 조회 ${coverage.backfill.complete?'완료':'불완전, 수집 현황 확인 필요'} · API 8종 + 공개 게시판 5곳`:`수집 기준 ${coverage.start_date} 이후 · 과거자료 수집 상태 확인 중`;}
     const dates=await datesResponse.json();$('history-list').replaceChildren();for(const day of dates){const a=node('a',{className:'archive-row',href:day.url});a.append(node('strong',{},day.date),node('span',{},`${day.count}건 · 원자료 날짜`));$('history-list').append(a);}if(!dates.length)$('history-list').append(node('p',{},'기간 내 확인된 자료가 없습니다. 수집 현황을 함께 확인해 주세요.'));
   }catch(error){$('sync-status').textContent='데이터 로딩 실패';$('record-list').replaceChildren(empty('데이터를 읽지 못했습니다','잠시 뒤 다시 시도해 주세요. 문제가 계속되면 수집 작업의 실행 기록을 확인해 주세요.'));}
 }
