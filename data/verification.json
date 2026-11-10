@@ -1,0 +1,85 @@
+{
+  "checked_at": "2026-11-10T13:39:07+09:00",
+  "method": "Fresh official API fields compared independently with stored titles, identifiers, dates and typed amount fields",
+  "results": [
+    {
+      "id": "98e52f45002b809c0a1976af",
+      "notice_number": "R26BD00296424",
+      "title": "성남금토 스마트도시 정보통신공사-금속기둥",
+      "stage": "사전규격",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "0fba90aa39b6833caf6bc41c",
+      "notice_number": "2603962",
+      "title": "성남금토2 공공주택지구 지형측량(무인비행장치)용역",
+      "stage": "입찰공고",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "adf52f68889532d128b8f1c3",
+      "notice_number": "2603450",
+      "title": "성남금토 A-4BL 아파트 전기공사 2공구-디젤발전기",
+      "stage": "계약",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "0bf88b66d648ee36af2fae16",
+      "notice_number": "API 미제공",
+      "title": "성남금토A2BL(국민·영구임대) 위탁관리용역(신규입주)",
+      "stage": "발주계획",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "7b55c6ba68d3c67266612596",
+      "notice_number": "API 미제공",
+      "title": "성남금토2 공공주택지구 조사설계용역",
+      "stage": "발주계획",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    },
+    {
+      "id": "a15b63b8a51dd2e39c4b79b0",
+      "notice_number": "API 미제공",
+      "title": "(재공고)성남금토 A-4BL 2공구(토목)-혼합골재",
+      "stage": "발주계획",
+      "checks": {
+        "title": true,
+        "number": true,
+        "date": true,
+        "amounts": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}
