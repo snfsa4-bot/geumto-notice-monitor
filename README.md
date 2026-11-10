@@ -2,19 +2,22 @@
 
 기존 금토지구 홈페이지와 별도로 운영할 나라장터·LH 공공조달 모니터링 프로젝트입니다. 이메일은 발송하지 않습니다.
 
-**현재: 코드 준비·테스트 통과, 실 API 정상수집 및 홈페이지 배포 검증 전입니다.**
-최근 실호출에서 API 10(요청 인자 오류), API 01(제공기관 내부 오류)이 관찰됐으며 공고 0건으로 확정하지 않았습니다.
-공식 명세와 검증의 구분, 남은 구현·검증 항목은 [검증 기록](docs/VALIDATION.md)에 있습니다.
+**운영 검증:** 공식 API 8종 전체 조회 및 게시 자료 6건의 공고명·번호·날짜·금액 대조를 통과했습니다.
 
-## 직접 필요한 설정
+- 홈페이지: https://snfsa4-bot.github.io/geumto-notice-monitor/
+- 매일 오전 9시 한국시간(UTC 00:00)에 자동 조회·게시합니다. GitHub 예약 실행은 지연·누락될 수 있으며 정각 게시를 보장하지 않습니다.
+- 검증 결과: [data/verification.json](data/verification.json), [검증 기록](docs/VALIDATION.md).
+- 최근 7일 자료 3건과 월 단위 발주계획 3건을 구분합니다. 발주계획 등록일이 지난달이어도 이번 조회월 계획에 포함될 수 있습니다.
+- 이메일을 발송하는 코드는 없습니다.
 
-1. [Actions Secrets](https://github.com/snfsa4-bot/geumto-notice-monitor/settings/secrets/actions)에 재발급 키를 `DATA_GO_KR_KEY`라는 이름으로 등록합니다. 키를 코드·채팅에 쓰지 않습니다.
-2. [Pages 설정](https://github.com/snfsa4-bot/geumto-notice-monitor/settings/pages)에서 Source를 **GitHub Actions**로 선택합니다.
-3. [Actions](https://github.com/snfsa4-bot/geumto-notice-monitor/actions) → ‘금토 공고 수집과 홈페이지 발행’ → Run workflow, 조회 기간 **7일**로 수동 시험합니다.
-4. 8종 API 정상 조회와 공고 원문 대조 후에만 Actions Variables의 `MONITOR_ENABLED`를 `true`로 설정합니다.
+## 사용자 설정
 
-정기 작업은 한국시간 오전 9시(UTC 00:00)입니다. GitHub 예약 실행은 지연·누락될 수 있으며 정각 게시를 보장하지 않습니다.
-사이트는 마지막 조회가 27시간을 넘으면 지연 상태를 표시합니다. 예약 실행 자체가 누락된 경우 정적 홈페이지는 방문 시 경과시간으로 판단합니다.
+인증키는 Actions Secrets의 `DATA_GO_KR_KEY`로 관리합니다. Pages의 Source는 GitHub Actions입니다.
+키를 갱신할 때에는 [Actions Secrets](https://github.com/snfsa4-bot/geumto-notice-monitor/settings/secrets/actions)에서 기존 값을 수정하세요.
+수동 조회는 [Actions](https://github.com/snfsa4-bot/geumto-notice-monitor/actions) → ‘금토 공고 수집과 홈페이지 발행’ → Run workflow에서 실행합니다.
+일상 조회는 3일을 중복 조회하며, 7일을 선택하면 공식 필드 대조도 실행합니다.
+정기 실행은 7일 실검증을 통과한 뒤 워크플로에서 활성화했습니다. 추가 Variables 설정은 필요 없습니다.
+사이트는 마지막 조회가 27시간을 넘으면 지연 상태를 표시합니다.
 
 ## 동작과 한계
 
@@ -25,7 +28,10 @@
 - 금토1·금토2·A-4BL·기반시설과 단계·확인기간을 필터링합니다. 미분류 공고를 금토1로 추정하지 않습니다.
 - 기초금액·예산·계약금액 등 금액 종류를 유지합니다. 개찰 결과를 최종낙찰로 표시하지 않습니다.
 - 상세 URL이 없으면 ‘공식 사이트 검색’으로 안내합니다.
-- LH 계약의 기간 전체조회 지원 여부, 교차기관 중복 제거·단계 연계, 약한 지역근거 자료의 관리 검토 기능은 추가 검증·보완 대상입니다.
+- LH 계약은 계약번호를 비워 두는 기간 전체조회가 실검증됐습니다.
+- 교차기관 중복은 공고번호·차수·기관·단계가 일치할 때만 묶으며, 명시된 참조번호로만 단계를 연결합니다.
+- 약한 지역근거 자료는 공개하지 않습니다. 별도의 관리자 검토 화면은 아직 제공하지 않습니다.
+- 변경 감지는 조회 범위 내 같은 공고의 원자료 비교를 기반으로 합니다. 오래된 공고의 변경은 API 검색 범위에 다시 포함돼야 탐지할 수 있습니다.
 
 ## 개발 검증
 

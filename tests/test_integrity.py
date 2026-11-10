@@ -90,3 +90,17 @@ def test_tail_request_does_not_extend_past_total_count():
     items,count=fetch_source(session,SOURCES[0],'dummy',datetime.now(KST))
     assert count==250 and not items
     assert session.calls==[(0,100),(100,100),(200,50)]
+
+def test_transient_application_error_is_retried_without_becoming_empty(monkeypatch):
+    from app.collector import request_page
+    monkeypatch.setattr('app.collector.time.sleep',lambda _:None)
+    class Response:
+        status_code=200
+        def __init__(self,raw):self.text=raw
+    class Session:
+        calls=0
+        def get(self,*args,**kwargs):
+            self.calls+=1
+            return Response('{"response":{"header":{"resultCode":"99"}}}' if self.calls<3 else '{"response":{"header":{"resultCode":"00"},"body":{"totalCount":0,"items":[]}}}')
+    s=Session();assert request_page(s,'https://example.invalid',{'pageNo':2})==([],0)
+    assert s.calls==3

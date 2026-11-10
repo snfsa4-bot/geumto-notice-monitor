@@ -8,6 +8,7 @@ import os
 import re
 import sys
 import tempfile
+import time
 import xml.etree.ElementTree as ET
 from collections import defaultdict
 from datetime import datetime, timedelta
@@ -162,6 +163,21 @@ def request_params(source,key,start,end):
     else: p.update(orderExpectYmStart=start.strftime('%Y%m'),orderExpectYmEnd=end.strftime('%Y%m'))
     return p
 
+def request_page(session,url,params):
+    for attempt in range(3):
+        response=session.get(url,params=params,timeout=(10,45))
+        try:
+            rows,total=parse_page(response.text)
+        except FeedError as ex:
+            if ex.code in {'api_99','api_01','api_1','api_02','api_2','api_05','api_5'} and attempt<2:
+                time.sleep(2**attempt)
+                continue
+            raise FeedError(ex.code,f"페이지 {params['pageNo']}: {ex}") from None
+        if response.status_code!=200:
+            raise FeedError('http_'+str(response.status_code),'HTTP '+str(response.status_code))
+        return rows,total
+    raise FeedError('retry_exhausted','제공기관 오류 재시도 소진')
+
 def fetch_source(session,source,key,now,days=3):
     service,category,url,stage=source
     params=request_params(source,key,now-timedelta(days=days),now)
@@ -173,20 +189,7 @@ def fetch_source(session,source,key,now,days=3):
         params['numOfRows']=size
         page=len(rows)//size+1
         params['pageNo']=page
-        response=session.get(url,params=params,timeout=(10,45))
-        if response.status_code!=200:
-            try:
-                parse_page(response.text)
-            except FeedError as ex:
-                if ex.code.startswith('api_'):
-                    raise FeedError(ex.code, f'HTTP {response.status_code} · {ex}') from None
-            except (ValueError, ET.ParseError, TypeError):
-                pass
-            raise FeedError('http_'+str(response.status_code),'HTTP '+str(response.status_code))
-        try:
-            batch,total=parse_page(response.text)
-        except FeedError as ex:
-            raise FeedError(ex.code,f'페이지 {page}: {ex}') from None
+        batch,total=request_page(session,url,params)
         if expected is not None and total is not None and total!=expected: raise FeedError('changing_total','페이지 조회 중 전체 건수 변경: 재조회 필요')
         if total is not None: expected=total
         fingerprint=digest(batch)
