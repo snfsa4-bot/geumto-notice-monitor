@@ -1,0 +1,72 @@
+name: 금토 공고 수집과 홈페이지 발행
+on:
+  workflow_dispatch:
+    inputs:
+      lookback_days:
+        description: '조회 기간 (최초 검증 7일, 운영 3일)'
+        default: '7'
+        type: choice
+        options: ['3', '7']
+  schedule:
+    # UTC 00:00 = 한국시간 09:00. GitHub 예약은 지연될 수 있습니다.
+    - cron: '0 0 * * *'
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+concurrency:
+  group: geumto-daily-site
+  cancel-in-progress: false
+jobs:
+  collect-and-publish:
+    if: github.event_name == 'workflow_dispatch' || vars.MONITOR_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-dev.txt
+      - name: Regression checks
+        run: python -m pytest -q
+      - name: Collect and preserve failure status
+        id: collect
+        continue-on-error: true
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+          REQUIRE_COMPLETE_RUN: '1'
+          LOOKBACK: ${{ inputs.lookback_days || '3' }}
+        run: python -m app.collector --days "$LOOKBACK"
+      - name: Render query status even on API failure
+        run: python -m app.render
+      - name: Commit recorded history
+        run: |
+          git config user.name 'geumto-daily-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/state.json site/data site/posts site/notices
+          if ! git diff --cached --quiet; then
+            git commit -m "Record procurement query results"
+            git push
+          fi
+      - name: Preserve diagnostics
+        uses: actions/upload-artifact@v4
+        with:
+          name: collection-status-${{ github.run_id }}
+          path: site/data/runs.json
+          retention-days: 30
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - name: Publish current notices and query health
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Mark incomplete collection as failed
+        if: steps.collect.outcome != 'success'
+        run: |
+          echo '필수 API 조회 불완전. 공개된 수집 현황과 작업 아티팩트를 확인하세요.' >> "$GITHUB_STEP_SUMMARY"
+          exit 1

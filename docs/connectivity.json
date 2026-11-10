@@ -1,0 +1,58 @@
+[
+  {
+    "url": "https://apis.data.go.kr/1230000/ad/BidPublicInfoService02",
+    "http_status": 400,
+    "body_preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OpenAPI_ServiceResponse>\n<cmmMsgHeader>\n  <errMsg>NO_OPENAPI_SERVICE_ERROR</errMsg>\n  <returnAuthMsg>해당 오픈API 서비스가 없거나 폐기됨</returnAuthMsg>\n  <returnReasonCode>12</returnReasonCode>\n</cmmMsgHeader>\n</OpenAPI_Ser",
+    "authenticated": false,
+    "data_verified": false
+  },
+  {
+    "url": "https://apis.data.go.kr/1230000/ao/HrcspSsstndrdInfoService",
+    "http_status": 400,
+    "body_preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OpenAPI_ServiceResponse>\n<cmmMsgHeader>\n  <errMsg>NO_OPENAPI_SERVICE_ERROR</errMsg>\n  <returnAuthMsg>해당 오픈API 서비스가 없거나 폐기됨</returnAuthMsg>\n  <returnReasonCode>12</returnReasonCode>\n</cmmMsgHeader>\n</OpenAPI_Ser",
+    "authenticated": false,
+    "data_verified": false
+  },
+  {
+    "url": "https://apis.data.go.kr/1230000/as/ScsbidInfoService",
+    "http_status": 400,
+    "body_preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OpenAPI_ServiceResponse>\n<cmmMsgHeader>\n  <errMsg>NO_OPENAPI_SERVICE_ERROR</errMsg>\n  <returnAuthMsg>해당 오픈API 서비스가 없거나 폐기됨</returnAuthMsg>\n  <returnReasonCode>12</returnReasonCode>\n</cmmMsgHeader>\n</OpenAPI_Ser",
+    "authenticated": false,
+    "data_verified": false
+  },
+  {
+    "url": "https://apis.data.go.kr/1230000/ao/CntrctInfoService",
+    "http_status": 400,
+    "body_preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OpenAPI_ServiceResponse>\n<cmmMsgHeader>\n  <errMsg>NO_OPENAPI_SERVICE_ERROR</errMsg>\n  <returnAuthMsg>해당 오픈API 서비스가 없거나 폐기됨</returnAuthMsg>\n  <returnReasonCode>12</returnReasonCode>\n</cmmMsgHeader>\n</OpenAPI_Ser",
+    "authenticated": false,
+    "data_verified": false
+  },
+  {
+    "url": "https://apis.data.go.kr/B552555/OpenBidInfoList",
+    "http_status": 400,
+    "body_preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OpenAPI_ServiceResponse>\n<cmmMsgHeader>\n  <errMsg>NO_OPENAPI_SERVICE_ERROR</errMsg>\n  <returnAuthMsg>해당 오픈API 서비스가 없거나 폐기됨</returnAuthMsg>\n  <returnReasonCode>12</returnReasonCode>\n</cmmMsgHeader>\n</OpenAPI_Ser",
+    "authenticated": false,
+    "data_verified": false
+  },
+  {
+    "url": "https://apis.data.go.kr/B552555/OpenTenderopenList",
+    "http_status": 400,
+    "body_preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OpenAPI_ServiceResponse>\n<cmmMsgHeader>\n  <errMsg>NO_OPENAPI_SERVICE_ERROR</errMsg>\n  <returnAuthMsg>해당 오픈API 서비스가 없거나 폐기됨</returnAuthMsg>\n  <returnReasonCode>12</returnReasonCode>\n</cmmMsgHeader>\n</OpenAPI_Ser",
+    "authenticated": false,
+    "data_verified": false
+  },
+  {
+    "url": "https://apis.data.go.kr/B552555/OpenContractInfoList",
+    "http_status": 400,
+    "body_preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OpenAPI_ServiceResponse>\n<cmmMsgHeader>\n  <errMsg>NO_OPENAPI_SERVICE_ERROR</errMsg>\n  <returnAuthMsg>해당 오픈API 서비스가 없거나 폐기됨</returnAuthMsg>\n  <returnReasonCode>12</returnReasonCode>\n</cmmMsgHeader>\n</OpenAPI_Ser",
+    "authenticated": false,
+    "data_verified": false
+  },
+  {
+    "url": "https://apis.data.go.kr/B552555/OpenOrdergPlanLis",
+    "http_status": 400,
+    "body_preview": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<OpenAPI_ServiceResponse>\n<cmmMsgHeader>\n  <errMsg>NO_OPENAPI_SERVICE_ERROR</errMsg>\n  <returnAuthMsg>해당 오픈API 서비스가 없거나 폐기됨</returnAuthMsg>\n  <returnReasonCode>12</returnReasonCode>\n</cmmMsgHeader>\n</OpenAPI_Ser",
+    "authenticated": false,
+    "data_verified": false
+  }
+]
