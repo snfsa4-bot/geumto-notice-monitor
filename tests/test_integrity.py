@@ -70,3 +70,23 @@ def test_missing_key_records_eight_unconfigured_services(tmp_path,monkeypatch):
     assert latest['successful_services']==0 and not latest['complete']
     assert all(s['code']=='missing_key' for s in latest['statuses'])
     assert state['records']==[]
+
+def test_bid_publication_date_is_not_future_opening_date():
+    row=normalize({'bidnmKor':'성남금토2 측량','bidNum':'2603962','tndrbidRegDt':'20261109','openDtm':'2026/11/18 11:00'},'LH 전자조달','입찰공고','입찰공고')
+    assert row['date']=='20261109'
+
+def test_tail_request_does_not_extend_past_total_count():
+    class Response:
+        status_code=200
+        def __init__(self,rows):self.text=json.dumps({'response':{'header':{'resultCode':'00'},'body':{'totalCount':250,'items':rows}}})
+    class Session:
+        calls=[]
+        def get(self,url,params,timeout):
+            size=params['numOfRows'];offset=(params['pageNo']-1)*size
+            self.calls.append((offset,size))
+            assert offset+size<=250
+            return Response([{'bidNtceNm':'타지역 공고','bidNtceNo':str(i)} for i in range(offset,offset+size)])
+    session=Session()
+    items,count=fetch_source(session,SOURCES[0],'dummy',datetime.now(KST))
+    assert count==250 and not items
+    assert session.calls==[(0,100),(100,100),(200,50)]

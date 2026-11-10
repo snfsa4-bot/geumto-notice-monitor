@@ -129,7 +129,8 @@ def normalize(rec, service, category, stage):
     notice_id=pick(rec,'untyCntrctNo','dcsnCntrctNo','bidNtceNo','bfSpecRgstNo','bidNum','cntrctNo','ntceNo')
     sequence=pick(rec,'bidNtceOrd','bidDegree','bidOrd')
     agency=pick(rec,'ntceInsttNm','cntrctInsttNm','orderInsttNm','dminsttNm','rlDminsttNm','revertDeptNm','orderDeptChusilnm') or ('한국토지주택공사' if service=='LH 전자조달' else '')
-    at=pick(rec,'bidNtceDt','rcptDt','fnlSucsfDate','rlOpengDt','openDtm','opengDt','cntrctCnclsDate','ctrctCntrctgDt','aprvlDt','rgstDt')
+    date_fields={'입찰공고':('bidNtceDt','tndrbidRegDt'),'사전규격':('rcptDt','rgstDt'),'개찰결과':('openDtm','opengDt','rlOpengDt'),'낙찰결과':('fnlSucsfDate','rgstDt'),'계약':('cntrctCnclsDate','ctrctCntrctgDt','cntrctDate'),'발주계획':('aprvlDt',)}
+    at=pick(rec,*date_fields.get(stage,('rgstDt',)))
     amounts=[{'label':label,'value':pick(rec,key),'field':key} for key,label in AMOUNTS.items() if pick(rec,key)]
     url=pick(rec,'bidNtceDtlUrl','bidNtceUrl','cntrctDtlInfoUrl')
     try:
@@ -165,7 +166,12 @@ def fetch_source(session,source,key,now,days=3):
     service,category,url,stage=source
     params=request_params(source,key,now-timedelta(days=days),now)
     rows=[];seen_pages=set();expected=None
-    for page in range(1,1001):
+    for request_index in range(1,1001):
+        # Some LH pages fail if a page extends past totalCount. Request an exact tail.
+        limit=min(100,expected-len(rows)) if expected is not None else 100
+        size=next(n for n in range(limit,0,-1) if len(rows)%n==0)
+        params['numOfRows']=size
+        page=len(rows)//size+1
         params['pageNo']=page
         response=session.get(url,params=params,timeout=(10,45))
         if response.status_code!=200:
@@ -177,7 +183,10 @@ def fetch_source(session,source,key,now,days=3):
             except (ValueError, ET.ParseError, TypeError):
                 pass
             raise FeedError('http_'+str(response.status_code),'HTTP '+str(response.status_code))
-        batch,total=parse_page(response.text)
+        try:
+            batch,total=parse_page(response.text)
+        except FeedError as ex:
+            raise FeedError(ex.code,f'페이지 {page}: {ex}') from None
         if expected is not None and total is not None and total!=expected: raise FeedError('changing_total','페이지 조회 중 전체 건수 변경: 재조회 필요')
         if total is not None: expected=total
         fingerprint=digest(batch)
@@ -186,7 +195,7 @@ def fetch_source(session,source,key,now,days=3):
         if total is not None and len(rows)>=total:
             if len(rows)!=total: raise FeedError('count_mismatch','페이지 전체 건수 불일치')
             break
-        if not batch or (total is None and len(batch)<100): break
+        if not batch or (total is None and len(batch)<size): break
     else: raise FeedError('pagination_limit','페이지 상한 초과: 조회 불완전')
     # LH opening returns one row per bidder: group into one event, do not publish bidders as revisions.
     groups=defaultdict(list)
@@ -226,7 +235,13 @@ def run(days=3):
                 items,raw_count=fetch_source(session,source,key,now,days)
                 count=0
                 for item in items:
-                    if seen.get(item['id'])==item['fingerprint']: continue
+                    if seen.get(item['id'])==item['fingerprint']:
+                        # Refresh corrected presentation fields without inventing a source revision.
+                        for existing in state.get('records',[]):
+                            if existing['id']==item['id'] and existing.get('fingerprint')==item['fingerprint']:
+                                existing.update(item)
+                                if existing.get('change_type')=='변경':existing['stage']=item['stage']+' · 내용변경'
+                        continue
                     changed=item['id'] in seen
                     item['first_seen']=first_seen.get(item['id']) or now.isoformat(timespec='seconds')
                     item['observed_at']=now.isoformat(timespec='seconds')
@@ -238,10 +253,11 @@ def run(days=3):
             except FeedError as ex: status.update(status='조회 실패',code=ex.code,detail=str(ex))
             except requests.RequestException: status.update(status='조회 실패',code='network_error',detail='통신 오류 또는 재시도 소진. 인증키를 포함한 요청 URL은 기록하지 않습니다.')
             except (ValueError,ET.ParseError,KeyError,TypeError): status.update(status='조회 실패',code='schema_error',detail='응답 형식 또는 필드가 명세와 다릅니다. 검토 필요.')
+        status['checked_at']=datetime.now(KST).isoformat(timespec='seconds')
         statuses.append(status)
         print(json.dumps({'source':category,'service':service,'status':status['status'],'code':status['code']},ensure_ascii=False),flush=True)
-    stamp=now.isoformat(timespec='seconds')
-    new_run={'date':now.strftime('%Y-%m-%d'),'checked_at':stamp,'lookback_days':days,'statuses':statuses,'new_ids':[r['id'] for r in fresh],'new_event_ids':[r['event_id'] for r in fresh],'successful_sources':sum(s['status']=='성공' for s in statuses),'total_sources':len(statuses),'new_count':len(fresh),'complete':all(s['status']=='성공' for s in statuses)}
+    stamp=datetime.now(KST).isoformat(timespec='seconds')
+    new_run={'date':now.strftime('%Y-%m-%d'),'started_at':now.isoformat(timespec='seconds'),'checked_at':stamp,'lookback_days':days,'statuses':statuses,'new_ids':[r['id'] for r in fresh],'new_event_ids':[r['event_id'] for r in fresh],'successful_sources':sum(s['status']=='성공' for s in statuses),'total_sources':len(statuses),'new_count':len(fresh),'complete':all(s['status']=='성공' for s in statuses)}
     new_run['successful_services']=sum(all(s['status']=='성공' for s in statuses if s['dataset']==dataset) for dataset in CONTRACTS)
     new_run['total_services']=len(CONTRACTS)
     state.update(fingerprints=seen,records=fresh+state.get('records',[]),runs=[new_run]+state.get('runs',[]))

@@ -41,13 +41,20 @@ jobs:
           REQUIRE_COMPLETE_RUN: '1'
           LOOKBACK: ${{ inputs.lookback_days || '3' }}
         run: python -m app.collector --days "$LOOKBACK"
+      - name: Independently compare seven-day records with official fields
+        if: inputs.lookback_days == '7'
+        id: verify
+        continue-on-error: true
+        env:
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+        run: python -m app.verify
       - name: Render query status even on API failure
         run: python -m app.render
       - name: Commit recorded history
         run: |
           git config user.name 'geumto-daily-bot'
           git config user.email 'actions@users.noreply.github.com'
-          git add data/state.json site/data site/posts site/notices
+          git add data site/data site/posts site/notices
           if ! git diff --cached --quiet; then
             git commit -m "Record procurement query results"
             git push
@@ -66,7 +73,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Mark incomplete collection as failed
-        if: steps.collect.outcome != 'success'
+        if: steps.collect.outcome != 'success' || steps.verify.outcome == 'failure'
         run: |
           echo '필수 API 조회 불완전. 공개된 수집 현황과 작업 아티팩트를 확인하세요.' >> "$GITHUB_STEP_SUMMARY"
           exit 1
