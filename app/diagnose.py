@@ -1,36 +1,19 @@
-"""Bounded, sanitized official-API diagnostics using an Actions secret."""
-import json
-import os
-from datetime import datetime,timedelta
-from pathlib import Path
-import requests
+import os,json
 from concurrent.futures import ThreadPoolExecutor
-from app.collector import SOURCES,KST,parse_page,request_params,FeedError,pick,atomic_write
+from datetime import datetime,timedelta
+import requests
+from app.collector import KST,parse_page,FeedError
 
 def run():
-    now=datetime.now(KST);key=os.environ.get('DATA_GO_KR_KEY','').strip()
-    results=[]
-    if not key: raise SystemExit('DATA_GO_KR_KEY is not configured')
-    def check(source):
-        service,category,url,stage=source
-        start=now-timedelta(days=7)
-        if service=='LH 전자조달' and stage=='계약':
-            params={'serviceKey':key,'pageNo':1,'numOfRows':2,'contractDtStart':start.strftime('%Y%m%d'),'contractDtEnd':now.strftime('%Y%m%d'),'bidNum':''}
-        else:
-            params=request_params(source,key,start,now);params['numOfRows']=2
-        result={'service':service,'category':category,'endpoint':url,'period_days':7,'checked_at':now.isoformat(timespec='seconds')}
+    key=os.environ['DATA_GO_KR_KEY'];now=datetime.now(KST);start=now-timedelta(days=7)
+    cases=[(size,page) for size in (2,10,20,50,100) for page in (1,2)]
+    def check(case):
+        size,page=case;p={'serviceKey':key,'pageNo':page,'numOfRows':size,'openDtmStart':start.strftime('%Y%m%d'),'openDtmEnd':now.strftime('%Y%m%d')}
+        r=requests.get('https://apis.data.go.kr/B552555/OpenTenderopenList/getOpenTenderopenList',params=p,timeout=30)
+        out={'page':page,'requested_rows':size,'http':r.status_code}
         try:
-            response=requests.get(url,params=params,timeout=(10,30))
-            result['http_status']=response.status_code
-            rows,total=parse_page(response.text)
-            if response.status_code!=200: raise FeedError('http_'+str(response.status_code),'HTTP error')
-            result.update(status='success',total_count=total,samples=[{k:str(row[k]) for k in ('bidNtceNo','bidNtceOrd','bidNum','bidDegree','bfSpecRgstNo','untyCntrctNo','bidNtceNm','prdctClsfcNoNm','cnstwkNm','cntrctNm','ctrctNm','bidnmKor','bsnsNm','bidNtceDt','rcptDt','openDtm','cntrctCnclsDate','ctrctCntrctgDt') if row.get(k)} for row in rows])
-        except FeedError as ex:result.update(status='error',code=ex.code,detail=str(ex))
-        except requests.RequestException:result.update(status='error',code='network_error')
-        except (ValueError,TypeError):result.update(status='error',code='schema_error')
-        print(json.dumps({k:v for k,v in result.items() if k!='samples'},ensure_ascii=False),flush=True)
-        return result
-    with ThreadPoolExecutor(max_workers=4) as pool:
-        results=list(pool.map(check,SOURCES))
-    atomic_write(Path('diagnostics/api-probe.json'),results)
+            rows,total=parse_page(r.text);out.update(rows=len(rows),total=total,samples=[{k:v for k,v in row.items() if k in ('bidNum','bidDegree','bidnmKor','openDtm')} for row in rows[:2]])
+        except FeedError as ex:out.update(error=ex.code,body=r.text.replace(key,'[REDACTED]')[:800])
+        print(json.dumps(out,ensure_ascii=False),flush=True)
+    with ThreadPoolExecutor(max_workers=3) as pool:list(pool.map(check,cases))
 if __name__=='__main__':run()
