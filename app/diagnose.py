@@ -6,7 +6,7 @@ from app.collector import KST,parse_page,FeedError
 
 def run():
     key=os.environ['DATA_GO_KR_KEY'];now=datetime.now(KST);start=now-timedelta(days=7)
-    cases=[(100,page) for page in range(1,70)]
+    cases=[(100,67),(100,69),(68,101),(2,3435),(10,687)]
     def check(case):
         size,page=case;p={'serviceKey':key,'pageNo':page,'numOfRows':size,'openDtmStart':start.strftime('%Y%m%d'),'openDtmEnd':now.strftime('%Y%m%d')}
         r=requests.get('https://apis.data.go.kr/B552555/OpenTenderopenList/getOpenTenderopenList',params=p,timeout=30)
