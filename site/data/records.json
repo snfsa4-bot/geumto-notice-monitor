@@ -1,5 +1,119 @@
 [
   {
+    "id": "014bbe6a2a0515ab3d4bf47b",
+    "fingerprint": "970d1bfdbe3100bea7821792",
+    "title": "신규입주단지 관리사무소 공기구,비품 구매(성남금토 A2BL(국민,영구))",
+    "service": "나라장터",
+    "category": "사전규격 · 물품",
+    "stage": "사전규격",
+    "base_stage": "사전규격",
+    "date": "2026-11-11 23:40:49",
+    "publication_date": "2026-11-11",
+    "agency": "한국토지주택공사",
+    "notice_id": "R26BD00298819",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "29089510",
+        "field": "asignBdgtAmt"
+      }
+    ],
+    "amount": "배정예산 29089510",
+    "url": "https://www.g2b.go.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {
+      "bfSpecRgstNo": "R26BD00298819",
+      "refNo": "20261111233001"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "29089510",
+      "bfSpecRgstNo": "R26BD00298819",
+      "prdctClsfcNoNm": "신규입주단지 관리사무소 공기구,비품 구매(성남금토 A2BL(국민,영구))",
+      "rcptDt": "2026-11-11 23:40:49",
+      "rgstDt": "2026-11-11 23:40:49"
+    },
+    "first_seen": "2026-11-12T10:00:03+09:00",
+    "observed_at": "2026-11-12T10:00:03+09:00",
+    "event_id": "a77e69ef6c0783747764f3f8",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "014bbe6a2a0515ab3d4bf47b",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/"
+      }
+    ]
+  },
+  {
+    "id": "eef4096ec38f2d2a6bb5ea69",
+    "fingerprint": "ecfffea2aa329010220b302e",
+    "title": "2026년 신규입주단지 관리사무소 공기구,비품 구매(성남금토 A2BL(국민,영구))",
+    "service": "LH 전자조달",
+    "category": "발주계획",
+    "stage": "발주계획",
+    "base_stage": "발주계획",
+    "date": "20261111",
+    "publication_date": "2026-11-11",
+    "agency": "경기남부지역본부",
+    "notice_id": "",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "설계금액",
+        "value": "29089510",
+        "field": "odrplanDesignAmt"
+      },
+      {
+        "label": "지급자재금액",
+        "value": "0",
+        "field": "odrplanPayrrsAmt"
+      },
+      {
+        "label": "합계금액",
+        "value": "0",
+        "field": "cstrtnSumAmt"
+      }
+    ],
+    "amount": "설계금액 29089510 / 지급자재금액 0 / 합계금액 0",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "aprvlDt": "20261111 ",
+      "bsnsNm": "2026년 신규입주단지 관리사무소 공기구,비품 구매(성남금토 A2BL(국민,영구)) ",
+      "cstrtnSumAmt": "0 ",
+      "odrplanDesignAmt": "29089510 ",
+      "odrplanPayrrsAmt": "0 ",
+      "orderExpectMonth": "11 ",
+      "orderExpectYr": "2026 "
+    },
+    "source_identity": "eef4096ec38f2d2a6bb5ea69",
+    "first_seen": "2026-11-12T10:00:03+09:00",
+    "observed_at": "2026-11-12T10:00:03+09:00",
+    "event_id": "7601ab0917089dda3eb1f5d5",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "eef4096ec38f2d2a6bb5ea69",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
     "id": "4dd3bc57c27debc768d484c4",
     "fingerprint": "50f947688f1ba041d985ccd9",
     "title": "성남금토 고속도로(용인서울, 안양성남) 정보통신공사 감리용역",
