@@ -1,5 +1,119 @@
 [
   {
+    "id": "f224e32b4efc59f383edea0c",
+    "fingerprint": "df4e2110c4ad6ea282b7cad1",
+    "title": "성남금토 A-4BL 아파트 전기공사 2공구-실내조명기구",
+    "service": "나라장터",
+    "category": "입찰공고 · 물품",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "2026-11-12 15:47:38",
+    "publication_date": "2026-11-12",
+    "agency": "조달청 서울지방조달청",
+    "notice_id": "R26BK01826500",
+    "sequence": "000",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "2481536590",
+        "field": "asignBdgtAmt"
+      },
+      {
+        "label": "추정가격",
+        "value": "2242351800",
+        "field": "presmptPrce"
+      }
+    ],
+    "amount": "배정예산 2481536590 / 추정가격 2242351800",
+    "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01826500&bidPbancOrd=000",
+    "source_detail_verified": true,
+    "areas": [
+      "A-4BL",
+      "기반시설"
+    ],
+    "references": {
+      "bidNtceNo": "R26BK01826500",
+      "bfSpecRgstNo": "R26BD00292232"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "2481536590",
+      "bfSpecRgstNo": "R26BD00292232",
+      "bidNtceDt": "2026-11-12 15:47:38",
+      "bidNtceNm": "성남금토 A-4BL 아파트 전기공사 2공구-실내조명기구",
+      "bidNtceNo": "R26BK01826500",
+      "bidNtceOrd": "000",
+      "opengDt": "2026-11-20 11:00:00",
+      "presmptPrce": "2242351800",
+      "rgstDt": "2026-11-12 15:47:38"
+    },
+    "first_seen": "2026-11-13T09:56:11+09:00",
+    "observed_at": "2026-11-13T09:56:11+09:00",
+    "event_id": "5a78acf98dfa7909076e5126",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "f224e32b4efc59f383edea0c",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01826500&bidPbancOrd=000"
+      }
+    ]
+  },
+  {
+    "id": "ab9738f5021a369df1bed0eb",
+    "fingerprint": "276787bacb0c47f520aed5a7",
+    "title": "성남금토 A-4BL 아파트 건설공사 2공구-플로어링보드",
+    "service": "나라장터",
+    "category": "사전규격 · 물품",
+    "stage": "사전규격",
+    "base_stage": "사전규격",
+    "date": "2026-11-12 18:02:04",
+    "publication_date": "2026-11-12",
+    "agency": "조달청 서울지방조달청",
+    "notice_id": "R26BD00299514",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "1103187683",
+        "field": "asignBdgtAmt"
+      }
+    ],
+    "amount": "배정예산 1103187683",
+    "url": "https://www.g2b.go.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL"
+    ],
+    "references": {
+      "bfSpecRgstNo": "R26BD00299514",
+      "refNo": "경기남부주택품질3팀-4279"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "1103187683",
+      "bfSpecRgstNo": "R26BD00299514",
+      "prdctClsfcNoNm": "성남금토 A-4BL 아파트 건설공사 2공구-플로어링보드 ",
+      "rcptDt": "2026-11-12 18:02:04",
+      "rgstDt": "2026-11-12 18:02:01"
+    },
+    "first_seen": "2026-11-13T09:56:11+09:00",
+    "observed_at": "2026-11-13T09:56:11+09:00",
+    "event_id": "b0de96256c5b0da0f1ef2e4a",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "ab9738f5021a369df1bed0eb",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/"
+      }
+    ]
+  },
+  {
     "id": "014bbe6a2a0515ab3d4bf47b",
     "fingerprint": "970d1bfdbe3100bea7821792",
     "title": "신규입주단지 관리사무소 공기구,비품 구매(성남금토 A2BL(국민,영구))",
