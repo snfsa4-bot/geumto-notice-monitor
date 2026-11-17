@@ -1,5 +1,61 @@
 [
   {
+    "id": "3f0057e57b54dd5401d31917",
+    "fingerprint": "4379ac39d6004b51214a91c7",
+    "title": "성남금토 A2BL 아파트(국민·영구임대) 위탁관리용역(신규입주)",
+    "service": "LH 전자조달",
+    "category": "입찰공고",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "20261116",
+    "publication_date": "2026-11-16",
+    "agency": "한국토지주택공사",
+    "notice_id": "2604064",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "19735000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "19734444",
+        "field": "designPrc"
+      }
+    ],
+    "amount": "기초금액 19735000 / 설계금액 19734444",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2604064",
+      "bidnmKor": "성남금토 A2BL 아파트(국민·영구임대) 위탁관리용역(신규입주) ",
+      "designPrc": "19734444 ",
+      "fdmtlAmt": "19735000 ",
+      "openDtm": "2026/11/24 11:00 ",
+      "tndrbidRegDt": "20261116 "
+    },
+    "first_seen": "2026-11-17T09:56:05+09:00",
+    "observed_at": "2026-11-17T09:56:05+09:00",
+    "event_id": "9ef682ffafd18fd5adb44343",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "3f0057e57b54dd5401d31917",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
     "id": "d08072aba767fcc5ec418591",
     "fingerprint": "ad0db465fd215a34c2002d9e",
     "title": "성남금토 스마트도시 정보통신공사-금속기둥",
