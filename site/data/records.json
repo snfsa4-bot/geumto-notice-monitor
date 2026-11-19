@@ -1,5 +1,182 @@
 [
   {
+    "id": "005d5eb69d0121e5b0c3e5a8",
+    "fingerprint": "6e0a2d1a1e2f1bfb2347cefc",
+    "title": "성남금토 조성공사-순환골재",
+    "service": "나라장터",
+    "category": "사전규격 · 물품",
+    "stage": "사전규격",
+    "base_stage": "사전규격",
+    "date": "2026-11-18 23:40:34",
+    "publication_date": "2026-11-18",
+    "agency": "한국토지주택공사",
+    "notice_id": "R26BD00302832",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "99000000",
+        "field": "asignBdgtAmt"
+      }
+    ],
+    "amount": "배정예산 99000000",
+    "url": "https://www.g2b.go.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {
+      "bfSpecRgstNo": "R26BD00302832",
+      "refNo": "20261118233001"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "99000000",
+      "bfSpecRgstNo": "R26BD00302832",
+      "prdctClsfcNoNm": "성남금토 조성공사-순환골재",
+      "rcptDt": "2026-11-18 23:40:34",
+      "rgstDt": "2026-11-18 23:40:34"
+    },
+    "first_seen": "2026-11-19T10:00:12+09:00",
+    "observed_at": "2026-11-19T10:00:12+09:00",
+    "event_id": "9dbdd240976ef0a1ade71efd",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "005d5eb69d0121e5b0c3e5a8",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/"
+      }
+    ]
+  },
+  {
+    "id": "677d7a9f7ab53c83b00528f0",
+    "fingerprint": "07fb035d26d2e28981487bd8",
+    "title": "성남금토2 공공주택지구 지형측량(무인비행장치)용역",
+    "service": "LH 전자조달",
+    "category": "개찰결과",
+    "stage": "개찰결과",
+    "base_stage": "개찰결과",
+    "date": "2026/11/18 11:00",
+    "publication_date": "2026-11-18",
+    "agency": "한국토지주택공사",
+    "notice_id": "2603962",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "43208000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "43208000",
+        "field": "designPrc"
+      },
+      {
+        "label": "예정가격",
+        "value": "43238000",
+        "field": "expectPrc"
+      }
+    ],
+    "amount": "기초금액 43208000 / 설계금액 43208000 / 예정가격 43238000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "금토2"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2603962",
+      "bidnmKor": "성남금토2 공공주택지구 지형측량(무인비행장치)용역 ",
+      "designPrc": "43208000 ",
+      "expectPrc": "43238000 ",
+      "fdmtlAmt": "43208000 ",
+      "openDtm": "2026/11/18 11:00 "
+    },
+    "opening_note": "개찰 결과는 최종 낙찰·계약체결을 의미하지 않습니다",
+    "bidder_rows": 133,
+    "first_seen": "2026-11-19T10:00:12+09:00",
+    "observed_at": "2026-11-19T10:00:12+09:00",
+    "event_id": "d5bf2094ac0845434a5336a9",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "677d7a9f7ab53c83b00528f0",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "40333970a04ee6b08d632db9",
+    "fingerprint": "6b7421e82f953085b795e61c",
+    "title": "성남금토 조성공사-순환골재",
+    "service": "LH 전자조달",
+    "category": "발주계획",
+    "stage": "발주계획",
+    "base_stage": "발주계획",
+    "date": "20261118",
+    "publication_date": "2026-11-18",
+    "agency": "경기남부지역본부",
+    "notice_id": "",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "설계금액",
+        "value": "99000000",
+        "field": "odrplanDesignAmt"
+      },
+      {
+        "label": "지급자재금액",
+        "value": "0",
+        "field": "odrplanPayrrsAmt"
+      },
+      {
+        "label": "합계금액",
+        "value": "0",
+        "field": "cstrtnSumAmt"
+      }
+    ],
+    "amount": "설계금액 99000000 / 지급자재금액 0 / 합계금액 0",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "aprvlDt": "20261118 ",
+      "bsnsNm": "성남금토 조성공사-순환골재 ",
+      "cstrtnSumAmt": "0 ",
+      "odrplanDesignAmt": "99000000 ",
+      "odrplanPayrrsAmt": "0 ",
+      "orderExpectMonth": "11 ",
+      "orderExpectYr": "2026 "
+    },
+    "source_identity": "40333970a04ee6b08d632db9",
+    "first_seen": "2026-11-19T10:00:12+09:00",
+    "observed_at": "2026-11-19T10:00:12+09:00",
+    "event_id": "bdb53a7ede4222ea6f3daf9d",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "40333970a04ee6b08d632db9",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
     "id": "3f0057e57b54dd5401d31917",
     "fingerprint": "4379ac39d6004b51214a91c7",
     "title": "성남금토 A2BL 아파트(국민·영구임대) 위탁관리용역(신규입주)",
