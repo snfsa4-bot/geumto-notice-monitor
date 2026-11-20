@@ -1,5 +1,181 @@
 [
   {
+    "id": "93c5b179aabd44f7d5f74458",
+    "fingerprint": "4854e7adc04b5433fc0881f5",
+    "title": "성남금토지구 건축유산 이전 및 복원사업 설계용역",
+    "service": "나라장터",
+    "category": "사전규격 · 용역",
+    "stage": "사전규격",
+    "base_stage": "사전규격",
+    "date": "2026-11-19 23:40:50",
+    "publication_date": "2026-11-19",
+    "agency": "한국토지주택공사",
+    "notice_id": "R26BD00303553",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "134882000",
+        "field": "asignBdgtAmt"
+      }
+    ],
+    "amount": "배정예산 134882000",
+    "url": "https://www.g2b.go.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {
+      "bfSpecRgstNo": "R26BD00303553",
+      "refNo": "20261119233001"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "134882000",
+      "bfSpecRgstNo": "R26BD00303553",
+      "prdctClsfcNoNm": "성남금토지구 건축유산 이전 및 복원사업 설계용역",
+      "rcptDt": "2026-11-19 23:40:50",
+      "rgstDt": "2026-11-19 23:40:50"
+    },
+    "first_seen": "2026-11-20T09:55:10+09:00",
+    "observed_at": "2026-11-20T09:55:10+09:00",
+    "event_id": "a9b99df9e9fe8c94805350b6",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "93c5b179aabd44f7d5f74458",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/"
+      }
+    ]
+  },
+  {
+    "id": "5b9b7459e804c2d36845c090",
+    "fingerprint": "b0272d4d20b0243d86057745",
+    "title": "(기술개발제품 시범구매)성남금토 A-4BL 아파트 건설공사 2공구-수중펌프",
+    "service": "LH 전자조달",
+    "category": "발주계획",
+    "stage": "발주계획",
+    "base_stage": "발주계획",
+    "date": "20261119",
+    "publication_date": "2026-11-19",
+    "agency": "경기남부지역본부",
+    "notice_id": "",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "설계금액",
+        "value": "131793530",
+        "field": "odrplanDesignAmt"
+      },
+      {
+        "label": "지급자재금액",
+        "value": "0",
+        "field": "odrplanPayrrsAmt"
+      },
+      {
+        "label": "합계금액",
+        "value": "0",
+        "field": "cstrtnSumAmt"
+      }
+    ],
+    "amount": "설계금액 131793530 / 지급자재금액 0 / 합계금액 0",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "aprvlDt": "20261119 ",
+      "bsnsNm": "(기술개발제품 시범구매)성남금토 A-4BL 아파트 건설공사 2공구-수중펌프 ",
+      "cstrtnSumAmt": "0 ",
+      "odrplanDesignAmt": "131793530 ",
+      "odrplanPayrrsAmt": "0 ",
+      "orderExpectMonth": "11 ",
+      "orderExpectYr": "2026 "
+    },
+    "source_identity": "5b9b7459e804c2d36845c090",
+    "first_seen": "2026-11-20T09:55:10+09:00",
+    "observed_at": "2026-11-20T09:55:10+09:00",
+    "event_id": "303ec955ca669f6656fadd6d",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "5b9b7459e804c2d36845c090",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "169d1def4cefb227129a2ffc",
+    "fingerprint": "7ba25191597698c199145df2",
+    "title": "성남금토지구 건축유산 이전 및 복원사업 설계용역",
+    "service": "LH 전자조달",
+    "category": "발주계획",
+    "stage": "발주계획",
+    "base_stage": "발주계획",
+    "date": "20261119",
+    "publication_date": "2026-11-19",
+    "agency": "경기남부지역본부",
+    "notice_id": "",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "설계금액",
+        "value": "134882000",
+        "field": "odrplanDesignAmt"
+      },
+      {
+        "label": "지급자재금액",
+        "value": "0",
+        "field": "odrplanPayrrsAmt"
+      },
+      {
+        "label": "합계금액",
+        "value": "134882000",
+        "field": "cstrtnSumAmt"
+      }
+    ],
+    "amount": "설계금액 134882000 / 지급자재금액 0 / 합계금액 134882000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "aprvlDt": "20261119 ",
+      "bsnsNm": "성남금토지구 건축유산 이전 및 복원사업 설계용역 ",
+      "cstrtnSumAmt": "134882000 ",
+      "odrplanDesignAmt": "134882000 ",
+      "odrplanPayrrsAmt": "0 ",
+      "orderExpectMonth": "11 ",
+      "orderExpectYr": "2026 "
+    },
+    "source_identity": "169d1def4cefb227129a2ffc",
+    "first_seen": "2026-11-20T09:55:10+09:00",
+    "observed_at": "2026-11-20T09:55:10+09:00",
+    "event_id": "ca2a2e63df1ca2b3077644e9",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "169d1def4cefb227129a2ffc",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
     "id": "005d5eb69d0121e5b0c3e5a8",
     "fingerprint": "6e0a2d1a1e2f1bfb2347cefc",
     "title": "성남금토 조성공사-순환골재",
