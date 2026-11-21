@@ -1,5 +1,178 @@
 [
   {
+    "id": "cddc76f391871cda013fc7af",
+    "fingerprint": "1181273066d4b9526d76b1fa",
+    "title": "성남금토 A-4BL 아파트 건설공사 2공구-플로어링보드",
+    "service": "나라장터",
+    "category": "입찰공고 · 물품",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "2026-11-20 15:09:12",
+    "publication_date": "2026-11-20",
+    "agency": "조달청 서울지방조달청",
+    "notice_id": "R26BK01845163",
+    "sequence": "000",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "1103187683",
+        "field": "asignBdgtAmt"
+      },
+      {
+        "label": "추정가격",
+        "value": "995293221",
+        "field": "presmptPrce"
+      }
+    ],
+    "amount": "배정예산 1103187683 / 추정가격 995293221",
+    "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01845163&bidPbancOrd=000",
+    "source_detail_verified": true,
+    "areas": [
+      "A-4BL"
+    ],
+    "references": {
+      "bidNtceNo": "R26BK01845163",
+      "bfSpecRgstNo": "R26BD00299514"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "1103187683",
+      "bfSpecRgstNo": "R26BD00299514",
+      "bidNtceDt": "2026-11-20 15:09:12",
+      "bidNtceNm": "성남금토 A-4BL 아파트 건설공사 2공구-플로어링보드 ",
+      "bidNtceNo": "R26BK01845163",
+      "bidNtceOrd": "000",
+      "opengDt": "2026-12-08 11:00:00",
+      "presmptPrce": "995293221",
+      "rgstDt": "2026-11-20 15:09:12"
+    },
+    "first_seen": "2026-11-21T09:58:19+09:00",
+    "observed_at": "2026-11-21T09:58:19+09:00",
+    "event_id": "004abb0bfd49352475334864",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "cddc76f391871cda013fc7af",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01845163&bidPbancOrd=000"
+      }
+    ]
+  },
+  {
+    "id": "372f92838b8303acbece827c",
+    "fingerprint": "e28fb904c364ad3aee08e22a",
+    "title": "(기술개발제품 시범구매)성남금토 A-4BL 아파트 건설공사 2공구-수중펌프",
+    "service": "LH 전자조달",
+    "category": "입찰공고",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "20261120",
+    "publication_date": "2026-11-20",
+    "agency": "한국토지주택공사",
+    "notice_id": "2604199",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "131794000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "131793530",
+        "field": "designPrc"
+      }
+    ],
+    "amount": "기초금액 131794000 / 설계금액 131793530",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2604199",
+      "bidnmKor": "(기술개발제품 시범구매)성남금토 A-4BL 아파트 건설공사 2공구-수중펌프 ",
+      "designPrc": "131793530 ",
+      "fdmtlAmt": "131794000 ",
+      "openDtm": "2026/11/30 13:00 ",
+      "tndrbidRegDt": "20261120 "
+    },
+    "first_seen": "2026-11-21T09:58:19+09:00",
+    "observed_at": "2026-11-21T09:58:19+09:00",
+    "event_id": "806aaaeff8ca986666703ed7",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "372f92838b8303acbece827c",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "59ef7991c94dd1a299c93fbc",
+    "fingerprint": "a9a15d4455f78570f867a803",
+    "title": "2026년 신규입주단지 관리사무소 공기구,비품 구매(성남금토 A2BL(국민,영구))",
+    "service": "LH 전자조달",
+    "category": "입찰공고",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "20261120",
+    "publication_date": "2026-11-20",
+    "agency": "한국토지주택공사",
+    "notice_id": "2604156",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "29090000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "29089510",
+        "field": "designPrc"
+      }
+    ],
+    "amount": "기초금액 29090000 / 설계금액 29089510",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2604156",
+      "bidnmKor": "2026년 신규입주단지 관리사무소 공기구,비품 구매(성남금토 A2BL(국민,영구)) ",
+      "designPrc": "29089510 ",
+      "fdmtlAmt": "29090000 ",
+      "openDtm": "2026/11/26 11:00 ",
+      "tndrbidRegDt": "20261120 "
+    },
+    "first_seen": "2026-11-21T09:58:19+09:00",
+    "observed_at": "2026-11-21T09:58:19+09:00",
+    "event_id": "8cf4e0c5ba163d44d6bb6e06",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "59ef7991c94dd1a299c93fbc",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
     "id": "93c5b179aabd44f7d5f74458",
     "fingerprint": "4854e7adc04b5433fc0881f5",
     "title": "성남금토지구 건축유산 이전 및 복원사업 설계용역",

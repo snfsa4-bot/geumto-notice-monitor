@@ -34,9 +34,164 @@
     "40333970a04ee6b08d632db9": "6b7421e82f953085b795e61c",
     "93c5b179aabd44f7d5f74458": "4854e7adc04b5433fc0881f5",
     "5b9b7459e804c2d36845c090": "b0272d4d20b0243d86057745",
-    "169d1def4cefb227129a2ffc": "7ba25191597698c199145df2"
+    "169d1def4cefb227129a2ffc": "7ba25191597698c199145df2",
+    "cddc76f391871cda013fc7af": "1181273066d4b9526d76b1fa",
+    "372f92838b8303acbece827c": "e28fb904c364ad3aee08e22a",
+    "59ef7991c94dd1a299c93fbc": "a9a15d4455f78570f867a803"
   },
   "records": [
+    {
+      "id": "cddc76f391871cda013fc7af",
+      "fingerprint": "1181273066d4b9526d76b1fa",
+      "title": "성남금토 A-4BL 아파트 건설공사 2공구-플로어링보드",
+      "service": "나라장터",
+      "category": "입찰공고 · 물품",
+      "stage": "입찰공고",
+      "base_stage": "입찰공고",
+      "date": "2026-11-20 15:09:12",
+      "publication_date": "2026-11-20",
+      "agency": "조달청 서울지방조달청",
+      "notice_id": "R26BK01845163",
+      "sequence": "000",
+      "amounts": [
+        {
+          "label": "배정예산",
+          "value": "1103187683",
+          "field": "asignBdgtAmt"
+        },
+        {
+          "label": "추정가격",
+          "value": "995293221",
+          "field": "presmptPrce"
+        }
+      ],
+      "amount": "배정예산 1103187683 / 추정가격 995293221",
+      "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01845163&bidPbancOrd=000",
+      "source_detail_verified": true,
+      "areas": [
+        "A-4BL"
+      ],
+      "references": {
+        "bidNtceNo": "R26BK01845163",
+        "bfSpecRgstNo": "R26BD00299514"
+      },
+      "vendor": "",
+      "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+      "source_fields": {
+        "asignBdgtAmt": "1103187683",
+        "bfSpecRgstNo": "R26BD00299514",
+        "bidNtceDt": "2026-11-20 15:09:12",
+        "bidNtceNm": "성남금토 A-4BL 아파트 건설공사 2공구-플로어링보드 ",
+        "bidNtceNo": "R26BK01845163",
+        "bidNtceOrd": "000",
+        "opengDt": "2026-12-08 11:00:00",
+        "presmptPrce": "995293221",
+        "rgstDt": "2026-11-20 15:09:12"
+      },
+      "first_seen": "2026-11-21T09:58:19+09:00",
+      "observed_at": "2026-11-21T09:58:19+09:00",
+      "event_id": "004abb0bfd49352475334864",
+      "historical_import": false,
+      "change_type": "신규"
+    },
+    {
+      "id": "372f92838b8303acbece827c",
+      "fingerprint": "e28fb904c364ad3aee08e22a",
+      "title": "(기술개발제품 시범구매)성남금토 A-4BL 아파트 건설공사 2공구-수중펌프",
+      "service": "LH 전자조달",
+      "category": "입찰공고",
+      "stage": "입찰공고",
+      "base_stage": "입찰공고",
+      "date": "20261120",
+      "publication_date": "2026-11-20",
+      "agency": "한국토지주택공사",
+      "notice_id": "2604199",
+      "sequence": "00",
+      "amounts": [
+        {
+          "label": "기초금액",
+          "value": "131794000",
+          "field": "fdmtlAmt"
+        },
+        {
+          "label": "설계금액",
+          "value": "131793530",
+          "field": "designPrc"
+        }
+      ],
+      "amount": "기초금액 131794000 / 설계금액 131793530",
+      "url": "https://ebid.lh.or.kr/",
+      "source_detail_verified": false,
+      "areas": [
+        "A-4BL"
+      ],
+      "references": {},
+      "vendor": "",
+      "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+      "source_fields": {
+        "bidDegree": "00",
+        "bidNum": "2604199",
+        "bidnmKor": "(기술개발제품 시범구매)성남금토 A-4BL 아파트 건설공사 2공구-수중펌프 ",
+        "designPrc": "131793530 ",
+        "fdmtlAmt": "131794000 ",
+        "openDtm": "2026/11/30 13:00 ",
+        "tndrbidRegDt": "20261120 "
+      },
+      "first_seen": "2026-11-21T09:58:19+09:00",
+      "observed_at": "2026-11-21T09:58:19+09:00",
+      "event_id": "806aaaeff8ca986666703ed7",
+      "historical_import": false,
+      "change_type": "신규"
+    },
+    {
+      "id": "59ef7991c94dd1a299c93fbc",
+      "fingerprint": "a9a15d4455f78570f867a803",
+      "title": "2026년 신규입주단지 관리사무소 공기구,비품 구매(성남금토 A2BL(국민,영구))",
+      "service": "LH 전자조달",
+      "category": "입찰공고",
+      "stage": "입찰공고",
+      "base_stage": "입찰공고",
+      "date": "20261120",
+      "publication_date": "2026-11-20",
+      "agency": "한국토지주택공사",
+      "notice_id": "2604156",
+      "sequence": "00",
+      "amounts": [
+        {
+          "label": "기초금액",
+          "value": "29090000",
+          "field": "fdmtlAmt"
+        },
+        {
+          "label": "설계금액",
+          "value": "29089510",
+          "field": "designPrc"
+        }
+      ],
+      "amount": "기초금액 29090000 / 설계금액 29089510",
+      "url": "https://ebid.lh.or.kr/",
+      "source_detail_verified": false,
+      "areas": [
+        "지역미분류"
+      ],
+      "references": {},
+      "vendor": "",
+      "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+      "source_fields": {
+        "bidDegree": "00",
+        "bidNum": "2604156",
+        "bidnmKor": "2026년 신규입주단지 관리사무소 공기구,비품 구매(성남금토 A2BL(국민,영구)) ",
+        "designPrc": "29089510 ",
+        "fdmtlAmt": "29090000 ",
+        "openDtm": "2026/11/26 11:00 ",
+        "tndrbidRegDt": "20261120 "
+      },
+      "first_seen": "2026-11-21T09:58:19+09:00",
+      "observed_at": "2026-11-21T09:58:19+09:00",
+      "event_id": "8cf4e0c5ba163d44d6bb6e06",
+      "historical_import": false,
+      "change_type": "신규"
+    },
     {
       "id": "93c5b179aabd44f7d5f74458",
       "fingerprint": "4854e7adc04b5433fc0881f5",
@@ -1778,6 +1933,337 @@
     }
   ],
   "runs": [
+    {
+      "date": "2026-11-21",
+      "started_at": "2026-11-21T09:58:19+09:00",
+      "checked_at": "2026-11-21T10:00:58+09:00",
+      "lookback_days": 3,
+      "query_from": "2026-11-18T09:58:19.020239+09:00",
+      "query_to": "2026-11-21T09:58:19.020239+09:00",
+      "backfill": false,
+      "statuses": [
+        {
+          "dataset": "15129394",
+          "service": "나라장터",
+          "category": "입찰공고 · 물품",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 1행 / 기간·지역 일치 1건 / 추가·변경 1건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 1,
+          "matched_count": 1,
+          "checked_at": "2026-11-21T09:58:20+09:00"
+        },
+        {
+          "dataset": "15129394",
+          "service": "나라장터",
+          "category": "입찰공고 · 공사",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 0행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 0,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:20+09:00"
+        },
+        {
+          "dataset": "15129394",
+          "service": "나라장터",
+          "category": "입찰공고 · 용역",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 0행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 0,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:20+09:00"
+        },
+        {
+          "dataset": "15129437",
+          "service": "나라장터",
+          "category": "사전규격 · 물품",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 1행 / 기간·지역 일치 1건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 1,
+          "matched_count": 1,
+          "checked_at": "2026-11-21T09:58:21+09:00"
+        },
+        {
+          "dataset": "15129437",
+          "service": "나라장터",
+          "category": "사전규격 · 공사",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 0행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 0,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:21+09:00"
+        },
+        {
+          "dataset": "15129437",
+          "service": "나라장터",
+          "category": "사전규격 · 용역",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 1행 / 기간·지역 일치 1건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 1,
+          "matched_count": 1,
+          "checked_at": "2026-11-21T09:58:21+09:00"
+        },
+        {
+          "dataset": "15129397",
+          "service": "나라장터",
+          "category": "개찰결과 · 물품",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 0행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 0,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:21+09:00"
+        },
+        {
+          "dataset": "15129397",
+          "service": "나라장터",
+          "category": "개찰결과 · 공사",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 0행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 0,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:22+09:00"
+        },
+        {
+          "dataset": "15129397",
+          "service": "나라장터",
+          "category": "개찰결과 · 용역",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 0행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 0,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:22+09:00"
+        },
+        {
+          "dataset": "15129397",
+          "service": "나라장터",
+          "category": "낙찰결과 · 물품",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 0행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 0,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:23+09:00"
+        },
+        {
+          "dataset": "15129397",
+          "service": "나라장터",
+          "category": "낙찰결과 · 공사",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 0행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 0,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:23+09:00"
+        },
+        {
+          "dataset": "15129397",
+          "service": "나라장터",
+          "category": "낙찰결과 · 용역",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 0행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 0,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:23+09:00"
+        },
+        {
+          "dataset": "15129427",
+          "service": "나라장터",
+          "category": "계약 · 물품",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 0행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 0,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:36+09:00"
+        },
+        {
+          "dataset": "15129427",
+          "service": "나라장터",
+          "category": "계약 · 공사",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 0행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 0,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:36+09:00"
+        },
+        {
+          "dataset": "15129427",
+          "service": "나라장터",
+          "category": "계약 · 용역",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 0행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 0,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:36+09:00"
+        },
+        {
+          "dataset": "15159012",
+          "service": "LH 전자조달",
+          "category": "입찰공고",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 89행 / 기간·지역 일치 2건 / 추가·변경 2건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 89,
+          "matched_count": 2,
+          "checked_at": "2026-11-21T09:58:39+09:00"
+        },
+        {
+          "dataset": "15159014",
+          "service": "LH 전자조달",
+          "category": "개찰결과",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 8274행 / 기간·지역 일치 1건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 8274,
+          "matched_count": 1,
+          "checked_at": "2026-11-21T09:58:55+09:00"
+        },
+        {
+          "dataset": "15159010",
+          "service": "LH 전자조달",
+          "category": "계약",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 39행 / 기간·지역 일치 0건 / 추가·변경 0건",
+          "query_from": "2026-11-18T09:58:19.020239+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 39,
+          "matched_count": 0,
+          "checked_at": "2026-11-21T09:58:55+09:00"
+        },
+        {
+          "dataset": "15159013",
+          "service": "LH 전자조달",
+          "category": "발주계획",
+          "status": "성공",
+          "code": "ok",
+          "detail": "기간분할 1회 / 원자료 653행 / 기간·지역 일치 8건 / 추가·변경 0건",
+          "query_from": "2026-10-01T00:00:00+09:00",
+          "query_to": "2026-11-21T09:58:19.020239+09:00",
+          "raw_count": 653,
+          "matched_count": 8,
+          "checked_at": "2026-11-21T09:58:58+09:00"
+        },
+        {
+          "dataset": "partner",
+          "service": "LH 기술혁신파트너몰",
+          "category": "공모·심의 계획",
+          "status": "성공",
+          "code": "ok",
+          "detail": "공개 목록 3건 확인 / 시작일 이전 3건 제외 / 기간·지역 일치 0건",
+          "matched_count": 0,
+          "scanned_count": 3,
+          "excluded_before_start": 3,
+          "checked_at": "2026-11-21T09:59:00+09:00"
+        },
+        {
+          "dataset": "partner",
+          "service": "LH 기술혁신파트너몰",
+          "category": "선정심의 결과",
+          "status": "성공",
+          "code": "ok",
+          "detail": "공개 목록 6건 확인 / 시작일 이전 6건 제외 / 기간·지역 일치 0건",
+          "matched_count": 0,
+          "scanned_count": 6,
+          "excluded_before_start": 6,
+          "checked_at": "2026-11-21T09:59:00+09:00"
+        },
+        {
+          "dataset": "partner",
+          "service": "LH 기술혁신파트너몰",
+          "category": "특정공법·자재 반영현황",
+          "status": "성공",
+          "code": "ok",
+          "detail": "공개 목록 0건 확인 / 시작일 이전 0건 제외 / 기간·지역 일치 0건",
+          "matched_count": 0,
+          "scanned_count": 0,
+          "excluded_before_start": 0,
+          "checked_at": "2026-11-21T09:59:01+09:00"
+        },
+        {
+          "dataset": "partner",
+          "service": "LH 기술혁신파트너몰",
+          "category": "공지사항",
+          "status": "성공",
+          "code": "ok",
+          "detail": "공개 목록 10건 확인 / 시작일 이전 10건 제외 / 기간·지역 일치 0건",
+          "matched_count": 0,
+          "scanned_count": 10,
+          "excluded_before_start": 10,
+          "checked_at": "2026-11-21T09:59:01+09:00"
+        },
+        {
+          "dataset": "partner",
+          "service": "LH 기술혁신파트너몰",
+          "category": "심의위원 선정결과",
+          "status": "조회 실패",
+          "code": "network_or_schema_error",
+          "detail": "공개 게시판 연결 또는 구조 확인 실패"
+        }
+      ],
+      "new_ids": [
+        "cddc76f391871cda013fc7af",
+        "372f92838b8303acbece827c",
+        "59ef7991c94dd1a299c93fbc"
+      ],
+      "new_event_ids": [
+        "004abb0bfd49352475334864",
+        "806aaaeff8ca986666703ed7",
+        "8cf4e0c5ba163d44d6bb6e06"
+      ],
+      "successful_sources": 23,
+      "total_sources": 24,
+      "new_count": 3,
+      "historical_count": 0,
+      "complete": false,
+      "successful_services": 8,
+      "total_services": 9
+    },
     {
       "date": "2026-11-20",
       "started_at": "2026-11-20T09:55:10+09:00",
