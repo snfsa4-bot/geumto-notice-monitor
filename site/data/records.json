@@ -1,5 +1,67 @@
 [
   {
+    "id": "7fa58d7fe481e0a0d285f521",
+    "fingerprint": "af3fab8adb65cceb1061f46f",
+    "title": "(혁신제품 또는 우수조달공동상표) 성남금토 A-4BL 아파트 건설공사 2공구-빌딩자동제어장치",
+    "service": "LH 전자조달",
+    "category": "발주계획",
+    "stage": "발주계획",
+    "base_stage": "발주계획",
+    "date": "20261123",
+    "publication_date": "2026-11-23",
+    "agency": "경기남부지역본부",
+    "notice_id": "",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "설계금액",
+        "value": "109539000",
+        "field": "odrplanDesignAmt"
+      },
+      {
+        "label": "지급자재금액",
+        "value": "0",
+        "field": "odrplanPayrrsAmt"
+      },
+      {
+        "label": "합계금액",
+        "value": "0",
+        "field": "cstrtnSumAmt"
+      }
+    ],
+    "amount": "설계금액 109539000 / 지급자재금액 0 / 합계금액 0",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "aprvlDt": "20261123 ",
+      "bsnsNm": "(혁신제품 또는 우수조달공동상표) 성남금토 A-4BL 아파트 건설공사 2공구-빌딩자동제어장치 ",
+      "cstrtnSumAmt": "0 ",
+      "odrplanDesignAmt": "109539000 ",
+      "odrplanPayrrsAmt": "0 ",
+      "orderExpectMonth": "11 ",
+      "orderExpectYr": "2026 "
+    },
+    "source_identity": "7fa58d7fe481e0a0d285f521",
+    "first_seen": "2026-11-24T09:58:15+09:00",
+    "observed_at": "2026-11-24T09:58:15+09:00",
+    "event_id": "d5da6766a0b7c7953a0c8cfb",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "7fa58d7fe481e0a0d285f521",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
     "id": "cddc76f391871cda013fc7af",
     "fingerprint": "1181273066d4b9526d76b1fa",
     "title": "성남금토 A-4BL 아파트 건설공사 2공구-플로어링보드",
