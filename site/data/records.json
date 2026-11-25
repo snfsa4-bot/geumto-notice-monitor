@@ -1,5 +1,242 @@
 [
   {
+    "id": "3d28d315c2bceb60d5a7d1c6",
+    "fingerprint": "bc10453097c1225883e8bc10",
+    "title": "금토동 건축유산 부재보관창고 이전 설치 공사",
+    "service": "나라장터",
+    "category": "입찰공고 · 공사",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "2026-11-24 14:29:04",
+    "publication_date": "2026-11-24",
+    "agency": "경기도 성남시",
+    "notice_id": "R26BK01851907",
+    "sequence": "000",
+    "amounts": [
+      {
+        "label": "추정가격",
+        "value": "36497273",
+        "field": "presmptPrce"
+      },
+      {
+        "label": "예산금액",
+        "value": "40147000",
+        "field": "bdgtAmt"
+      }
+    ],
+    "amount": "추정가격 36497273 / 예산금액 40147000",
+    "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01851907&bidPbancOrd=000",
+    "source_detail_verified": true,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {
+      "bidNtceNo": "R26BK01851907",
+      "refNo": "성남시 공고 제2026-2740호"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bdgtAmt": "40147000",
+      "bfSpecRgstNo": "",
+      "bidNtceDt": "2026-11-24 14:29:04",
+      "bidNtceNm": "금토동 건축유산 부재보관창고 이전 설치 공사",
+      "bidNtceNo": "R26BK01851907",
+      "bidNtceOrd": "000",
+      "opengDt": "2026-11-30 11:00:00",
+      "presmptPrce": "36497273",
+      "rgstDt": "2026-11-24 14:29:04"
+    },
+    "first_seen": "2026-11-25T10:01:58+09:00",
+    "observed_at": "2026-11-25T10:01:58+09:00",
+    "event_id": "9dd160369d8a98a548f07911",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "3d28d315c2bceb60d5a7d1c6",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01851907&bidPbancOrd=000"
+      }
+    ]
+  },
+  {
+    "id": "d811e5bab25648a8e7e04582",
+    "fingerprint": "d22a84565fa4c10fd772450c",
+    "title": "금토동 464번지(금토공공주택지구 학교) 개조 급수공사",
+    "service": "나라장터",
+    "category": "계약 · 공사",
+    "stage": "계약",
+    "base_stage": "계약",
+    "date": "2026-11-23",
+    "publication_date": "2026-11-23",
+    "agency": "경기도 성남시 맑은물관리사업소",
+    "notice_id": "R26TE20145814",
+    "sequence": "",
+    "amounts": [
+      {
+        "label": "총계약금액",
+        "value": "14170000",
+        "field": "totCntrctAmt"
+      },
+      {
+        "label": "금차계약금액",
+        "value": "14170000",
+        "field": "thtmCntrctAmt"
+      }
+    ],
+    "amount": "총계약금액 14170000 / 금차계약금액 14170000",
+    "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02359047&ctrtChgOrd=01&prcmBsneSeCd=조070004&srchName=ctrtCrst&openUrl=Y",
+    "source_detail_verified": true,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {
+      "cntrctRefNo": "R26TA0235904701"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "cnstwkNm": "금토동 464번지(금토공공주택지구 학교) 개조 급수공사",
+      "cntrctCnclsDate": "2026-11-23",
+      "rgstDt": "2026-11-24 14:09:37",
+      "thtmCntrctAmt": "14170000",
+      "totCntrctAmt": "14170000",
+      "untyCntrctNo": "R26TE20145814"
+    },
+    "first_seen": "2026-11-25T10:01:58+09:00",
+    "observed_at": "2026-11-25T10:01:58+09:00",
+    "event_id": "9d7eb3d175db3ca1bd79cc8e",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "d811e5bab25648a8e7e04582",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02359047&ctrtChgOrd=01&prcmBsneSeCd=조070004&srchName=ctrtCrst&openUrl=Y"
+      }
+    ]
+  },
+  {
+    "id": "54ceb153d152039dfcfcd2cd",
+    "fingerprint": "576b885926831d86d6812fe8",
+    "title": "(재공고)성남금토 A-4BL 2공구(토목)-혼합골재",
+    "service": "LH 전자조달",
+    "category": "입찰공고",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "20261124",
+    "publication_date": "2026-11-24",
+    "agency": "한국토지주택공사",
+    "notice_id": "2603805",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "104500000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "104500000",
+        "field": "designPrc"
+      }
+    ],
+    "amount": "기초금액 104500000 / 설계금액 104500000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2603805",
+      "bidnmKor": "(재공고)성남금토 A-4BL 2공구(토목)-혼합골재 ",
+      "designPrc": "104500000 ",
+      "fdmtlAmt": "104500000 ",
+      "openDtm": "2026/11/30 11:00 ",
+      "tndrbidRegDt": "20261124 "
+    },
+    "first_seen": "2026-11-25T10:01:58+09:00",
+    "observed_at": "2026-11-25T10:01:58+09:00",
+    "event_id": "ae1271253239b99c78c0aae8",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "54ceb153d152039dfcfcd2cd",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "f45536f95e0bd6bb35a164d3",
+    "fingerprint": "503a4f07715fe325d465ca89",
+    "title": "성남금토 A2BL 아파트(국민·영구임대) 위탁관리용역(신규입주)",
+    "service": "LH 전자조달",
+    "category": "개찰결과",
+    "stage": "개찰결과",
+    "base_stage": "개찰결과",
+    "date": "2026/11/24 11:00",
+    "publication_date": "2026-11-24",
+    "agency": "한국토지주택공사",
+    "notice_id": "2604064",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "19735000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "19734444",
+        "field": "designPrc"
+      },
+      {
+        "label": "예정가격",
+        "value": "19614000",
+        "field": "expectPrc"
+      }
+    ],
+    "amount": "기초금액 19735000 / 설계금액 19734444 / 예정가격 19614000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2604064",
+      "bidnmKor": "성남금토 A2BL 아파트(국민·영구임대) 위탁관리용역(신규입주) ",
+      "designPrc": "19734444 ",
+      "expectPrc": "19614000 ",
+      "fdmtlAmt": "19735000 ",
+      "openDtm": "2026/11/24 11:00 "
+    },
+    "opening_note": "개찰 결과는 최종 낙찰·계약체결을 의미하지 않습니다",
+    "bidder_rows": 109,
+    "first_seen": "2026-11-25T10:01:58+09:00",
+    "observed_at": "2026-11-25T10:01:58+09:00",
+    "event_id": "cd2fd8ca3b8b6991316f442e",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "f45536f95e0bd6bb35a164d3",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
     "id": "7fa58d7fe481e0a0d285f521",
     "fingerprint": "af3fab8adb65cceb1061f46f",
     "title": "(혁신제품 또는 우수조달공동상표) 성남금토 A-4BL 아파트 건설공사 2공구-빌딩자동제어장치",
