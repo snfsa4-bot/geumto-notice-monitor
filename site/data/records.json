@@ -1,5 +1,61 @@
 [
   {
+    "id": "1d1e270fd6ba64104064df70",
+    "fingerprint": "3a6ec61893bb10b1334c8bc7",
+    "title": "(혁신제품 또는 우수조달공동상표)성남금토 A-4BL 아파트 건설공사 2공구-빌딩자동제어장치",
+    "service": "LH 전자조달",
+    "category": "입찰공고",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "20261125",
+    "publication_date": "2026-11-25",
+    "agency": "한국토지주택공사",
+    "notice_id": "2604240",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "109539000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "109539000",
+        "field": "designPrc"
+      }
+    ],
+    "amount": "기초금액 109539000 / 설계금액 109539000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "A-4BL"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2604240",
+      "bidnmKor": "(혁신제품 또는 우수조달공동상표)성남금토 A-4BL 아파트 건설공사 2공구-빌딩자동제어장치 ",
+      "designPrc": "109539000 ",
+      "fdmtlAmt": "109539000 ",
+      "openDtm": "2026/12/03 11:00 ",
+      "tndrbidRegDt": "20261125 "
+    },
+    "first_seen": "2026-11-26T10:02:23+09:00",
+    "observed_at": "2026-11-26T10:02:23+09:00",
+    "event_id": "3a662fc0a77f815d96d5be6d",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "1d1e270fd6ba64104064df70",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
     "id": "3d28d315c2bceb60d5a7d1c6",
     "fingerprint": "bc10453097c1225883e8bc10",
     "title": "금토동 건축유산 부재보관창고 이전 설치 공사",
