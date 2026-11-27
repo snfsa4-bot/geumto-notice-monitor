@@ -1,5 +1,185 @@
 [
   {
+    "id": "668f329a50e5c4f46565a43a",
+    "fingerprint": "002c09a4938abf8660372cad",
+    "title": "성남금토 지구외 기반시설 설치공사 지급자재(유지관리형 방음판)",
+    "service": "나라장터",
+    "category": "입찰공고 · 물품",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "2026-11-26 14:03:25",
+    "publication_date": "2026-11-26",
+    "agency": "조달청 인천지방조달청",
+    "notice_id": "R26BK01848649",
+    "sequence": "000",
+    "amounts": [
+      {
+        "label": "배정예산",
+        "value": "647536820",
+        "field": "asignBdgtAmt"
+      },
+      {
+        "label": "추정가격",
+        "value": "583950000",
+        "field": "presmptPrce"
+      }
+    ],
+    "amount": "배정예산 647536820 / 추정가격 583950000",
+    "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01848649&bidPbancOrd=000",
+    "source_detail_verified": true,
+    "areas": [
+      "기반시설"
+    ],
+    "references": {
+      "bidNtceNo": "R26BK01848649",
+      "bfSpecRgstNo": "R26BD00290720"
+    },
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "asignBdgtAmt": "647536820",
+      "bfSpecRgstNo": "R26BD00290720",
+      "bidNtceDt": "2026-11-26 14:03:25",
+      "bidNtceNm": "성남금토 지구외 기반시설 설치공사 지급자재(유지관리형 방음판)",
+      "bidNtceNo": "R26BK01848649",
+      "bidNtceOrd": "000",
+      "opengDt": "2026-11-30 13:00:00",
+      "presmptPrce": "583950000",
+      "rgstDt": "2026-11-26 14:03:25"
+    },
+    "first_seen": "2026-11-27T10:07:57+09:00",
+    "observed_at": "2026-11-27T10:07:57+09:00",
+    "event_id": "f07301ebbf0dac7a7e640202",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "668f329a50e5c4f46565a43a",
+        "service": "나라장터",
+        "url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01848649&bidPbancOrd=000"
+      }
+    ]
+  },
+  {
+    "id": "676fc68e0af362ebcecd9702",
+    "fingerprint": "fafd26dd52a7e41952835e1b",
+    "title": "성남금토 조성공사-순환골재",
+    "service": "LH 전자조달",
+    "category": "입찰공고",
+    "stage": "입찰공고",
+    "base_stage": "입찰공고",
+    "date": "20261126",
+    "publication_date": "2026-11-26",
+    "agency": "한국토지주택공사",
+    "notice_id": "2604256",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "99000000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "99000000",
+        "field": "designPrc"
+      }
+    ],
+    "amount": "기초금액 99000000 / 설계금액 99000000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2604256",
+      "bidnmKor": "성남금토 조성공사-순환골재 ",
+      "designPrc": "99000000 ",
+      "fdmtlAmt": "99000000 ",
+      "openDtm": "2026/12/04 11:00 ",
+      "tndrbidRegDt": "20261126 "
+    },
+    "first_seen": "2026-11-27T10:07:57+09:00",
+    "observed_at": "2026-11-27T10:07:57+09:00",
+    "event_id": "98288699b5ec799a4ac8a66b",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "676fc68e0af362ebcecd9702",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
+    "id": "a42a9713f7ec7d42e72cc0bd",
+    "fingerprint": "42c3b13f30f6f7340c09ece3",
+    "title": "2026년 신규입주단지 관리사무소 공기구,비품 구매(성남금토 A2BL(국민,영구))",
+    "service": "LH 전자조달",
+    "category": "개찰결과",
+    "stage": "개찰결과",
+    "base_stage": "개찰결과",
+    "date": "2026/11/26 11:00",
+    "publication_date": "2026-11-26",
+    "agency": "한국토지주택공사",
+    "notice_id": "2604156",
+    "sequence": "00",
+    "amounts": [
+      {
+        "label": "기초금액",
+        "value": "29090000",
+        "field": "fdmtlAmt"
+      },
+      {
+        "label": "설계금액",
+        "value": "29089510",
+        "field": "designPrc"
+      },
+      {
+        "label": "예정가격",
+        "value": "29124000",
+        "field": "expectPrc"
+      }
+    ],
+    "amount": "기초금액 29090000 / 설계금액 29089510 / 예정가격 29124000",
+    "url": "https://ebid.lh.or.kr/",
+    "source_detail_verified": false,
+    "areas": [
+      "지역미분류"
+    ],
+    "references": {},
+    "vendor": "",
+    "evidence": "제목 또는 사업·현장 필드에서 성남금토 연관성 확인",
+    "source_fields": {
+      "bidDegree": "00",
+      "bidNum": "2604156",
+      "bidnmKor": "2026년 신규입주단지 관리사무소 공기구,비품 구매(성남금토 A2BL(국민,영구)) ",
+      "designPrc": "29089510 ",
+      "expectPrc": "29124000 ",
+      "fdmtlAmt": "29090000 ",
+      "openDtm": "2026/11/26 11:00 "
+    },
+    "opening_note": "개찰 결과는 최종 낙찰·계약체결을 의미하지 않습니다",
+    "bidder_rows": 822,
+    "first_seen": "2026-11-27T10:07:57+09:00",
+    "observed_at": "2026-11-27T10:07:57+09:00",
+    "event_id": "2b858347f301884175571e14",
+    "historical_import": false,
+    "change_type": "신규",
+    "sources": [
+      {
+        "id": "a42a9713f7ec7d42e72cc0bd",
+        "service": "LH 전자조달",
+        "url": "https://ebid.lh.or.kr/"
+      }
+    ]
+  },
+  {
     "id": "1d1e270fd6ba64104064df70",
     "fingerprint": "3a6ec61893bb10b1334c8bc7",
     "title": "(혁신제품 또는 우수조달공동상표)성남금토 A-4BL 아파트 건설공사 2공구-빌딩자동제어장치",
